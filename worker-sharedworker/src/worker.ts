@@ -2,6 +2,6 @@
 export {};
 const worker: WorkerGlobalScope = self as any;
 
-onmessage = ({ data }) => {
-  console.log("WORKER", data);
+onmessage = ({ data: index }) => {
+  console.log("%c Worker ", "background-color: cyan;", `#${index} spawned`);
 }
