@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WASI Example</title>
+  </head>
+  <body>
+    <center>
+      There's no content here.<br>
+      Use the console (<kbd>ctrl</kbd>-<kbd>shift</kbd>-<kbd>K</kbd>).
+    </center>
+    <script type="module">
+
+      // import WASI shim
+      import * as BrowserWasiShim from "https://cdn.jsdelivr.net/npm/@bjorn3/browser_wasi_shim@0.3.0/dist/index.js";
+      globalThis.BrowserWasiShim = BrowserWasiShim;
+      let { WASI, File, OpenFile, ConsoleStdout, PreopenDirectory } = BrowserWasiShim;
+
+      async function instantiate_wasi(wasmModule, argv, envs) {
+
+        // prepare a virtual filesystem
+        let utf8 = new TextEncoder("utf-8");
+        let fds = [
+          /* stdin  */ new OpenFile(new File([])),
+          /* stdout */ ConsoleStdout.lineBuffered(msg => console.log(`[WASI] ${msg}`)),
+          /* stderr */ ConsoleStdout.lineBuffered(msg => console.warn(`[WASI] ${msg}`)),
+          /* rootfs */ new PreopenDirectory(".", [
+            ["now.txt", new File(utf8.encode(new Date().toISOString()))],
+          ]),
+        ];
+
+        // initialize WASI shim with proper imports
+        let wasi = new WASI(["binary.wasm", ...argv], envs, fds);
+        let shim = {
+          "wasi_unstable": wasi.wasiImport,
+          "wasi_snapshot_preview1": wasi.wasiImport,
+        };
+
+        // instantiate the module with the shim
+        console.info("BrowserWasiShim prepared:", wasi, shim);
+        let instance = await WebAssembly.instantiate(wasmModule, shim);
+        console.info("WASM module instantiated:", instance);
+        return { wasi, instance };
+
+      };
+      globalThis.instantiate_wasi = instantiate_wasi;
+
+      async function run_wasi(wasmModule, argv, envs) {
+        let { wasi, instance } = instantiate_wasi(wasmModule, argv, envs);
+        return wasi.start(instance);
+      }
+      globalThis.run_wasi = run_wasi;
+
+    </script>
+  </body>
+</html>
+
