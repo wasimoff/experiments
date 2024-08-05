@@ -1,0 +1,40 @@
+// best practices: https://protobuf.dev/programming-guides/dos-donts/
+edition = "2023";
+
+option go_package = "./main";
+
+// Generic message on the wire.
+message Envelope {
+
+  uint64 seq = 1;
+
+  MessageType type = 2;
+  oneof payload {
+    HelloRequest request = 3;
+    HelloReply reply = 4;
+    HelloNote note = 5;
+  }
+
+}
+
+enum MessageType {
+  UNKNOWN = 0;
+  Request = 1;
+  Reply = 2;
+  Note = 3;
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+	string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+	string message = 1;
+}
+
+// Just a note, which expects no answer.
+message HelloNote {
+  string note = 1;
+}
