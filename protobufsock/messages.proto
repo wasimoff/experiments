@@ -36,3 +36,9 @@ message HelloReply {
 message HelloNote {
   string note = 1;
 }
+
+// used for benchmarking
+message Counter {
+  uint64 seq = 1;
+  bytes noise = 2;
+}

@@ -932,6 +932,256 @@ export const HelloNote = $root.HelloNote = (() => {
     return HelloNote;
 })();
 
+export const Counter = $root.Counter = (() => {
+
+    /**
+     * Properties of a Counter.
+     * @exports ICounter
+     * @interface ICounter
+     * @property {number|Long|null} [seq] Counter seq
+     * @property {Uint8Array|null} [noise] Counter noise
+     */
+
+    /**
+     * Constructs a new Counter.
+     * @exports Counter
+     * @classdesc Represents a Counter.
+     * @implements ICounter
+     * @constructor
+     * @param {ICounter=} [properties] Properties to set
+     */
+    function Counter(properties) {
+        if (properties)
+            for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                if (properties[keys[i]] != null)
+                    this[keys[i]] = properties[keys[i]];
+    }
+
+    /**
+     * Counter seq.
+     * @member {number|Long} seq
+     * @memberof Counter
+     * @instance
+     */
+    Counter.prototype.seq = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+
+    /**
+     * Counter noise.
+     * @member {Uint8Array} noise
+     * @memberof Counter
+     * @instance
+     */
+    Counter.prototype.noise = $util.newBuffer([]);
+
+    /**
+     * Creates a new Counter instance using the specified properties.
+     * @function create
+     * @memberof Counter
+     * @static
+     * @param {ICounter=} [properties] Properties to set
+     * @returns {Counter} Counter instance
+     */
+    Counter.create = function create(properties) {
+        return new Counter(properties);
+    };
+
+    /**
+     * Encodes the specified Counter message. Does not implicitly {@link Counter.verify|verify} messages.
+     * @function encode
+     * @memberof Counter
+     * @static
+     * @param {ICounter} message Counter message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    Counter.encode = function encode(message, writer) {
+        if (!writer)
+            writer = $Writer.create();
+        if (message.seq != null && Object.hasOwnProperty.call(message, "seq"))
+            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.seq);
+        if (message.noise != null && Object.hasOwnProperty.call(message, "noise"))
+            writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.noise);
+        return writer;
+    };
+
+    /**
+     * Encodes the specified Counter message, length delimited. Does not implicitly {@link Counter.verify|verify} messages.
+     * @function encodeDelimited
+     * @memberof Counter
+     * @static
+     * @param {ICounter} message Counter message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    Counter.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+    };
+
+    /**
+     * Decodes a Counter message from the specified reader or buffer.
+     * @function decode
+     * @memberof Counter
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @param {number} [length] Message length if known beforehand
+     * @returns {Counter} Counter
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    Counter.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader))
+            reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length, message = new $root.Counter();
+        while (reader.pos < end) {
+            let tag = reader.uint32();
+            switch (tag >>> 3) {
+            case 1: {
+                    message.seq = reader.uint64();
+                    break;
+                }
+            case 2: {
+                    message.noise = reader.bytes();
+                    break;
+                }
+            default:
+                reader.skipType(tag & 7);
+                break;
+            }
+        }
+        return message;
+    };
+
+    /**
+     * Decodes a Counter message from the specified reader or buffer, length delimited.
+     * @function decodeDelimited
+     * @memberof Counter
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @returns {Counter} Counter
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    Counter.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader))
+            reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+    };
+
+    /**
+     * Verifies a Counter message.
+     * @function verify
+     * @memberof Counter
+     * @static
+     * @param {Object.<string,*>} message Plain object to verify
+     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+     */
+    Counter.verify = function verify(message) {
+        if (typeof message !== "object" || message === null)
+            return "object expected";
+        if (message.seq != null && message.hasOwnProperty("seq"))
+            if (!$util.isInteger(message.seq) && !(message.seq && $util.isInteger(message.seq.low) && $util.isInteger(message.seq.high)))
+                return "seq: integer|Long expected";
+        if (message.noise != null && message.hasOwnProperty("noise"))
+            if (!(message.noise && typeof message.noise.length === "number" || $util.isString(message.noise)))
+                return "noise: buffer expected";
+        return null;
+    };
+
+    /**
+     * Creates a Counter message from a plain object. Also converts values to their respective internal types.
+     * @function fromObject
+     * @memberof Counter
+     * @static
+     * @param {Object.<string,*>} object Plain object
+     * @returns {Counter} Counter
+     */
+    Counter.fromObject = function fromObject(object) {
+        if (object instanceof $root.Counter)
+            return object;
+        let message = new $root.Counter();
+        if (object.seq != null)
+            if ($util.Long)
+                (message.seq = $util.Long.fromValue(object.seq)).unsigned = true;
+            else if (typeof object.seq === "string")
+                message.seq = parseInt(object.seq, 10);
+            else if (typeof object.seq === "number")
+                message.seq = object.seq;
+            else if (typeof object.seq === "object")
+                message.seq = new $util.LongBits(object.seq.low >>> 0, object.seq.high >>> 0).toNumber(true);
+        if (object.noise != null)
+            if (typeof object.noise === "string")
+                $util.base64.decode(object.noise, message.noise = $util.newBuffer($util.base64.length(object.noise)), 0);
+            else if (object.noise.length >= 0)
+                message.noise = object.noise;
+        return message;
+    };
+
+    /**
+     * Creates a plain object from a Counter message. Also converts values to other types if specified.
+     * @function toObject
+     * @memberof Counter
+     * @static
+     * @param {Counter} message Counter
+     * @param {$protobuf.IConversionOptions} [options] Conversion options
+     * @returns {Object.<string,*>} Plain object
+     */
+    Counter.toObject = function toObject(message, options) {
+        if (!options)
+            options = {};
+        let object = {};
+        if (options.defaults) {
+            if ($util.Long) {
+                let long = new $util.Long(0, 0, true);
+                object.seq = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+            } else
+                object.seq = options.longs === String ? "0" : 0;
+            if (options.bytes === String)
+                object.noise = "";
+            else {
+                object.noise = [];
+                if (options.bytes !== Array)
+                    object.noise = $util.newBuffer(object.noise);
+            }
+        }
+        if (message.seq != null && message.hasOwnProperty("seq"))
+            if (typeof message.seq === "number")
+                object.seq = options.longs === String ? String(message.seq) : message.seq;
+            else
+                object.seq = options.longs === String ? $util.Long.prototype.toString.call(message.seq) : options.longs === Number ? new $util.LongBits(message.seq.low >>> 0, message.seq.high >>> 0).toNumber(true) : message.seq;
+        if (message.noise != null && message.hasOwnProperty("noise"))
+            object.noise = options.bytes === String ? $util.base64.encode(message.noise, 0, message.noise.length) : options.bytes === Array ? Array.prototype.slice.call(message.noise) : message.noise;
+        return object;
+    };
+
+    /**
+     * Converts this Counter to JSON.
+     * @function toJSON
+     * @memberof Counter
+     * @instance
+     * @returns {Object.<string,*>} JSON object
+     */
+    Counter.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+    };
+
+    /**
+     * Gets the default type url for Counter
+     * @function getTypeUrl
+     * @memberof Counter
+     * @static
+     * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+     * @returns {string} The default type url
+     */
+    Counter.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+        if (typeUrlPrefix === undefined) {
+            typeUrlPrefix = "type.googleapis.com";
+        }
+        return typeUrlPrefix + "/Counter";
+    };
+
+    return Counter;
+})();
+
 export const google = $root.google = (() => {
 
     /**
