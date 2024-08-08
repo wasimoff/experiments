@@ -1,0 +1,480 @@
+{
+  "start": "2024-08-08T19:12:33.543Z",
+  "args": [
+    [
+      2000,
+      0
+    ],
+    [
+      2000,
+      32
+    ],
+    [
+      2000,
+      256
+    ],
+    [
+      2000,
+      1024
+    ],
+    [
+      2000,
+      65536
+    ]
+  ],
+  "repetitions": 10,
+  "wturl": "https://localhost:4443",
+  "wsurl": "wss://localhost:4080",
+  "results": [
+    {
+      "addNoise": 0,
+      "countTo": 2000,
+      "ws+json": 227,
+      "ws+msgp": 258,
+      "ws+proto": 235,
+      "wt+msgp": 610,
+      "wt+proto": 379
+    },
+    {
+      "addNoise": 0,
+      "countTo": 2000,
+      "ws+json": 244,
+      "ws+msgp": 238,
+      "ws+proto": 219,
+      "wt+msgp": 624,
+      "wt+proto": 371
+    },
+    {
+      "addNoise": 0,
+      "countTo": 2000,
+      "ws+json": 237,
+      "ws+msgp": 234,
+      "ws+proto": 217,
+      "wt+msgp": 615,
+      "wt+proto": 378
+    },
+    {
+      "addNoise": 0,
+      "countTo": 2000,
+      "ws+json": 222,
+      "ws+msgp": 261,
+      "ws+proto": 225,
+      "wt+msgp": 709,
+      "wt+proto": 377
+    },
+    {
+      "addNoise": 0,
+      "countTo": 2000,
+      "ws+json": 220,
+      "ws+msgp": 252,
+      "ws+proto": 245,
+      "wt+msgp": 669,
+      "wt+proto": 389
+    },
+    {
+      "addNoise": 0,
+      "countTo": 2000,
+      "ws+json": 231,
+      "ws+msgp": 255,
+      "ws+proto": 239,
+      "wt+msgp": 673,
+      "wt+proto": 403
+    },
+    {
+      "addNoise": 0,
+      "countTo": 2000,
+      "ws+json": 220,
+      "ws+msgp": 267,
+      "ws+proto": 243,
+      "wt+msgp": 671,
+      "wt+proto": 410
+    },
+    {
+      "addNoise": 0,
+      "countTo": 2000,
+      "ws+json": 228,
+      "ws+msgp": 245,
+      "ws+proto": 228,
+      "wt+msgp": 680,
+      "wt+proto": 393
+    },
+    {
+      "addNoise": 0,
+      "countTo": 2000,
+      "ws+json": 294,
+      "ws+msgp": 272,
+      "ws+proto": 239,
+      "wt+msgp": 690,
+      "wt+proto": 416
+    },
+    {
+      "addNoise": 0,
+      "countTo": 2000,
+      "ws+json": 234,
+      "ws+msgp": 252,
+      "ws+proto": 237,
+      "wt+msgp": 697,
+      "wt+proto": 402
+    },
+    {
+      "addNoise": 32,
+      "countTo": 2000,
+      "ws+json": 279,
+      "ws+msgp": 260,
+      "ws+proto": 250,
+      "wt+msgp": 720,
+      "wt+proto": 425
+    },
+    {
+      "addNoise": 32,
+      "countTo": 2000,
+      "ws+json": 265,
+      "ws+msgp": 280,
+      "ws+proto": 300,
+      "wt+msgp": 745,
+      "wt+proto": 415
+    },
+    {
+      "addNoise": 32,
+      "countTo": 2000,
+      "ws+json": 240,
+      "ws+msgp": 259,
+      "ws+proto": 240,
+      "wt+msgp": 696,
+      "wt+proto": 419
+    },
+    {
+      "addNoise": 32,
+      "countTo": 2000,
+      "ws+json": 241,
+      "ws+msgp": 258,
+      "ws+proto": 255,
+      "wt+msgp": 719,
+      "wt+proto": 403
+    },
+    {
+      "addNoise": 32,
+      "countTo": 2000,
+      "ws+json": 233,
+      "ws+msgp": 253,
+      "ws+proto": 240,
+      "wt+msgp": 686,
+      "wt+proto": 424
+    },
+    {
+      "addNoise": 32,
+      "countTo": 2000,
+      "ws+json": 238,
+      "ws+msgp": 254,
+      "ws+proto": 248,
+      "wt+msgp": 728,
+      "wt+proto": 420
+    },
+    {
+      "addNoise": 32,
+      "countTo": 2000,
+      "ws+json": 238,
+      "ws+msgp": 259,
+      "ws+proto": 243,
+      "wt+msgp": 689,
+      "wt+proto": 427
+    },
+    {
+      "addNoise": 32,
+      "countTo": 2000,
+      "ws+json": 243,
+      "ws+msgp": 257,
+      "ws+proto": 247,
+      "wt+msgp": 733,
+      "wt+proto": 414
+    },
+    {
+      "addNoise": 32,
+      "countTo": 2000,
+      "ws+json": 250,
+      "ws+msgp": 312,
+      "ws+proto": 242,
+      "wt+msgp": 700,
+      "wt+proto": 408
+    },
+    {
+      "addNoise": 32,
+      "countTo": 2000,
+      "ws+json": 238,
+      "ws+msgp": 258,
+      "ws+proto": 244,
+      "wt+msgp": 739,
+      "wt+proto": 397
+    },
+    {
+      "addNoise": 256,
+      "countTo": 2000,
+      "ws+json": 247,
+      "ws+msgp": 347,
+      "ws+proto": 247,
+      "wt+msgp": 700,
+      "wt+proto": 426
+    },
+    {
+      "addNoise": 256,
+      "countTo": 2000,
+      "ws+json": 246,
+      "ws+msgp": 267,
+      "ws+proto": 256,
+      "wt+msgp": 739,
+      "wt+proto": 416
+    },
+    {
+      "addNoise": 256,
+      "countTo": 2000,
+      "ws+json": 246,
+      "ws+msgp": 347,
+      "ws+proto": 242,
+      "wt+msgp": 716,
+      "wt+proto": 417
+    },
+    {
+      "addNoise": 256,
+      "countTo": 2000,
+      "ws+json": 240,
+      "ws+msgp": 271,
+      "ws+proto": 251,
+      "wt+msgp": 742,
+      "wt+proto": 406
+    },
+    {
+      "addNoise": 256,
+      "countTo": 2000,
+      "ws+json": 245,
+      "ws+msgp": 336,
+      "ws+proto": 281,
+      "wt+msgp": 709,
+      "wt+proto": 421
+    },
+    {
+      "addNoise": 256,
+      "countTo": 2000,
+      "ws+json": 251,
+      "ws+msgp": 281,
+      "ws+proto": 267,
+      "wt+msgp": 750,
+      "wt+proto": 474
+    },
+    {
+      "addNoise": 256,
+      "countTo": 2000,
+      "ws+json": 254,
+      "ws+msgp": 292,
+      "ws+proto": 386,
+      "wt+msgp": 717,
+      "wt+proto": 435
+    },
+    {
+      "addNoise": 256,
+      "countTo": 2000,
+      "ws+json": 246,
+      "ws+msgp": 268,
+      "ws+proto": 256,
+      "wt+msgp": 708,
+      "wt+proto": 470
+    },
+    {
+      "addNoise": 256,
+      "countTo": 2000,
+      "ws+json": 302,
+      "ws+msgp": 275,
+      "ws+proto": 324,
+      "wt+msgp": 704,
+      "wt+proto": 421
+    },
+    {
+      "addNoise": 256,
+      "countTo": 2000,
+      "ws+json": 249,
+      "ws+msgp": 283,
+      "ws+proto": 301,
+      "wt+msgp": 714,
+      "wt+proto": 432
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 2000,
+      "ws+json": 342,
+      "ws+msgp": 294,
+      "ws+proto": 320,
+      "wt+msgp": 741,
+      "wt+proto": 439
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 2000,
+      "ws+json": 343,
+      "ws+msgp": 305,
+      "ws+proto": 280,
+      "wt+msgp": 735,
+      "wt+proto": 440
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 2000,
+      "ws+json": 287,
+      "ws+msgp": 298,
+      "ws+proto": 275,
+      "wt+msgp": 760,
+      "wt+proto": 447
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 2000,
+      "ws+json": 282,
+      "ws+msgp": 289,
+      "ws+proto": 272,
+      "wt+msgp": 744,
+      "wt+proto": 440
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 2000,
+      "ws+json": 294,
+      "ws+msgp": 303,
+      "ws+proto": 275,
+      "wt+msgp": 777,
+      "wt+proto": 439
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 2000,
+      "ws+json": 285,
+      "ws+msgp": 290,
+      "ws+proto": 277,
+      "wt+msgp": 740,
+      "wt+proto": 463
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 2000,
+      "ws+json": 285,
+      "ws+msgp": 298,
+      "ws+proto": 290,
+      "wt+msgp": 745,
+      "wt+proto": 489
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 2000,
+      "ws+json": 291,
+      "ws+msgp": 373,
+      "ws+proto": 289,
+      "wt+msgp": 726,
+      "wt+proto": 443
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 2000,
+      "ws+json": 287,
+      "ws+msgp": 294,
+      "ws+proto": 330,
+      "wt+msgp": 713,
+      "wt+proto": 431
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 2000,
+      "ws+json": 281,
+      "ws+msgp": 298,
+      "ws+proto": 377,
+      "wt+msgp": 775,
+      "wt+proto": 446
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 2000,
+      "ws+json": 3274,
+      "ws+msgp": 1569,
+      "ws+proto": 1480,
+      "wt+msgp": 3597,
+      "wt+proto": 3213
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 2000,
+      "ws+json": 3317,
+      "ws+msgp": 1610,
+      "ws+proto": 1472,
+      "wt+msgp": 3920,
+      "wt+proto": 3201
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 2000,
+      "ws+json": 3312,
+      "ws+msgp": 1584,
+      "ws+proto": 1511,
+      "wt+msgp": 3927,
+      "wt+proto": 3197
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 2000,
+      "ws+json": 3271,
+      "ws+msgp": 1562,
+      "ws+proto": 1517,
+      "wt+msgp": 4076,
+      "wt+proto": 3218
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 2000,
+      "ws+json": 3272,
+      "ws+msgp": 1594,
+      "ws+proto": 1486,
+      "wt+msgp": 3919,
+      "wt+proto": 3267
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 2000,
+      "ws+json": 3299,
+      "ws+msgp": 1609,
+      "ws+proto": 1483,
+      "wt+msgp": 3929,
+      "wt+proto": 3213
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 2000,
+      "ws+json": 3315,
+      "ws+msgp": 1630,
+      "ws+proto": 1531,
+      "wt+msgp": 3905,
+      "wt+proto": 3178
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 2000,
+      "ws+json": 3330,
+      "ws+msgp": 1566,
+      "ws+proto": 1479,
+      "wt+msgp": 3899,
+      "wt+proto": 3223
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 2000,
+      "ws+json": 3373,
+      "ws+msgp": 1624,
+      "ws+proto": 1517,
+      "wt+msgp": 4043,
+      "wt+proto": 3179
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 2000,
+      "ws+json": 3238,
+      "ws+msgp": 1580,
+      "ws+proto": 1515,
+      "wt+msgp": 3934,
+      "wt+proto": 3201
+    }
+  ]
+}

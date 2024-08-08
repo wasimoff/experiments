@@ -1,0 +1,480 @@
+{
+  "start": "2024-08-08T19:11:20.450Z",
+  "args": [
+    [
+      200,
+      0
+    ],
+    [
+      200,
+      32
+    ],
+    [
+      200,
+      256
+    ],
+    [
+      200,
+      1024
+    ],
+    [
+      200,
+      65536
+    ]
+  ],
+  "repetitions": 10,
+  "wturl": "https://localhost:4443",
+  "wsurl": "wss://localhost:4080",
+  "results": [
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "ws+json": 21,
+      "ws+msgp": 24,
+      "ws+proto": 23,
+      "wt+msgp": 72,
+      "wt+proto": 43
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "ws+json": 21,
+      "ws+msgp": 25,
+      "ws+proto": 32,
+      "wt+msgp": 62,
+      "wt+proto": 46
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "ws+json": 22,
+      "ws+msgp": 26,
+      "ws+proto": 29,
+      "wt+msgp": 69,
+      "wt+proto": 43
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "ws+json": 24,
+      "ws+msgp": 25,
+      "ws+proto": 32,
+      "wt+msgp": 105,
+      "wt+proto": 36
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "ws+json": 22,
+      "ws+msgp": 27,
+      "ws+proto": 30,
+      "wt+msgp": 106,
+      "wt+proto": 37
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "ws+json": 21,
+      "ws+msgp": 26,
+      "ws+proto": 31,
+      "wt+msgp": 61,
+      "wt+proto": 35
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "ws+json": 23,
+      "ws+msgp": 23,
+      "ws+proto": 38,
+      "wt+msgp": 73,
+      "wt+proto": 38
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "ws+json": 20,
+      "ws+msgp": 23,
+      "ws+proto": 35,
+      "wt+msgp": 67,
+      "wt+proto": 35
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "ws+json": 21,
+      "ws+msgp": 25,
+      "ws+proto": 30,
+      "wt+msgp": 68,
+      "wt+proto": 36
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "ws+json": 20,
+      "ws+msgp": 23,
+      "ws+proto": 31,
+      "wt+msgp": 70,
+      "wt+proto": 37
+    },
+    {
+      "addNoise": 32,
+      "countTo": 200,
+      "ws+json": 21,
+      "ws+msgp": 28,
+      "ws+proto": 31,
+      "wt+msgp": 81,
+      "wt+proto": 41
+    },
+    {
+      "addNoise": 32,
+      "countTo": 200,
+      "ws+json": 24,
+      "ws+msgp": 26,
+      "ws+proto": 31,
+      "wt+msgp": 75,
+      "wt+proto": 39
+    },
+    {
+      "addNoise": 32,
+      "countTo": 200,
+      "ws+json": 25,
+      "ws+msgp": 24,
+      "ws+proto": 32,
+      "wt+msgp": 77,
+      "wt+proto": 39
+    },
+    {
+      "addNoise": 32,
+      "countTo": 200,
+      "ws+json": 24,
+      "ws+msgp": 27,
+      "ws+proto": 35,
+      "wt+msgp": 58,
+      "wt+proto": 43
+    },
+    {
+      "addNoise": 32,
+      "countTo": 200,
+      "ws+json": 24,
+      "ws+msgp": 27,
+      "ws+proto": 32,
+      "wt+msgp": 58,
+      "wt+proto": 46
+    },
+    {
+      "addNoise": 32,
+      "countTo": 200,
+      "ws+json": 22,
+      "ws+msgp": 26,
+      "ws+proto": 31,
+      "wt+msgp": 65,
+      "wt+proto": 47
+    },
+    {
+      "addNoise": 32,
+      "countTo": 200,
+      "ws+json": 25,
+      "ws+msgp": 28,
+      "ws+proto": 31,
+      "wt+msgp": 57,
+      "wt+proto": 49
+    },
+    {
+      "addNoise": 32,
+      "countTo": 200,
+      "ws+json": 23,
+      "ws+msgp": 26,
+      "ws+proto": 30,
+      "wt+msgp": 59,
+      "wt+proto": 43
+    },
+    {
+      "addNoise": 32,
+      "countTo": 200,
+      "ws+json": 33,
+      "ws+msgp": 22,
+      "ws+proto": 51,
+      "wt+msgp": 70,
+      "wt+proto": 48
+    },
+    {
+      "addNoise": 32,
+      "countTo": 200,
+      "ws+json": 21,
+      "ws+msgp": 24,
+      "ws+proto": 31,
+      "wt+msgp": 71,
+      "wt+proto": 36
+    },
+    {
+      "addNoise": 256,
+      "countTo": 200,
+      "ws+json": 22,
+      "ws+msgp": 29,
+      "ws+proto": 31,
+      "wt+msgp": 64,
+      "wt+proto": 40
+    },
+    {
+      "addNoise": 256,
+      "countTo": 200,
+      "ws+json": 23,
+      "ws+msgp": 29,
+      "ws+proto": 32,
+      "wt+msgp": 59,
+      "wt+proto": 50
+    },
+    {
+      "addNoise": 256,
+      "countTo": 200,
+      "ws+json": 24,
+      "ws+msgp": 26,
+      "ws+proto": 31,
+      "wt+msgp": 78,
+      "wt+proto": 39
+    },
+    {
+      "addNoise": 256,
+      "countTo": 200,
+      "ws+json": 22,
+      "ws+msgp": 24,
+      "ws+proto": 30,
+      "wt+msgp": 80,
+      "wt+proto": 41
+    },
+    {
+      "addNoise": 256,
+      "countTo": 200,
+      "ws+json": 22,
+      "ws+msgp": 24,
+      "ws+proto": 38,
+      "wt+msgp": 67,
+      "wt+proto": 38
+    },
+    {
+      "addNoise": 256,
+      "countTo": 200,
+      "ws+json": 26,
+      "ws+msgp": 27,
+      "ws+proto": 30,
+      "wt+msgp": 56,
+      "wt+proto": 46
+    },
+    {
+      "addNoise": 256,
+      "countTo": 200,
+      "ws+json": 23,
+      "ws+msgp": 26,
+      "ws+proto": 33,
+      "wt+msgp": 61,
+      "wt+proto": 43
+    },
+    {
+      "addNoise": 256,
+      "countTo": 200,
+      "ws+json": 24,
+      "ws+msgp": 22,
+      "ws+proto": 35,
+      "wt+msgp": 61,
+      "wt+proto": 39
+    },
+    {
+      "addNoise": 256,
+      "countTo": 200,
+      "ws+json": 24,
+      "ws+msgp": 25,
+      "ws+proto": 31,
+      "wt+msgp": 62,
+      "wt+proto": 35
+    },
+    {
+      "addNoise": 256,
+      "countTo": 200,
+      "ws+json": 23,
+      "ws+msgp": 23,
+      "ws+proto": 30,
+      "wt+msgp": 61,
+      "wt+proto": 46
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "ws+json": 28,
+      "ws+msgp": 26,
+      "ws+proto": 34,
+      "wt+msgp": 66,
+      "wt+proto": 42
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "ws+json": 29,
+      "ws+msgp": 29,
+      "ws+proto": 33,
+      "wt+msgp": 105,
+      "wt+proto": 42
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "ws+json": 35,
+      "ws+msgp": 26,
+      "ws+proto": 38,
+      "wt+msgp": 59,
+      "wt+proto": 47
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "ws+json": 31,
+      "ws+msgp": 24,
+      "ws+proto": 37,
+      "wt+msgp": 61,
+      "wt+proto": 40
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "ws+json": 27,
+      "ws+msgp": 27,
+      "ws+proto": 36,
+      "wt+msgp": 66,
+      "wt+proto": 43
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "ws+json": 25,
+      "ws+msgp": 28,
+      "ws+proto": 32,
+      "wt+msgp": 64,
+      "wt+proto": 39
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "ws+json": 28,
+      "ws+msgp": 26,
+      "ws+proto": 33,
+      "wt+msgp": 68,
+      "wt+proto": 43
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "ws+json": 28,
+      "ws+msgp": 25,
+      "ws+proto": 36,
+      "wt+msgp": 83,
+      "wt+proto": 44
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "ws+json": 29,
+      "ws+msgp": 28,
+      "ws+proto": 42,
+      "wt+msgp": 73,
+      "wt+proto": 49
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "ws+json": 27,
+      "ws+msgp": 27,
+      "ws+proto": 34,
+      "wt+msgp": 62,
+      "wt+proto": 42
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "ws+json": 372,
+      "ws+msgp": 169,
+      "ws+proto": 172,
+      "wt+msgp": 321,
+      "wt+proto": 332
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "ws+json": 349,
+      "ws+msgp": 185,
+      "ws+proto": 167,
+      "wt+msgp": 365,
+      "wt+proto": 326
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "ws+json": 342,
+      "ws+msgp": 173,
+      "ws+proto": 157,
+      "wt+msgp": 363,
+      "wt+proto": 344
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "ws+json": 353,
+      "ws+msgp": 184,
+      "ws+proto": 166,
+      "wt+msgp": 359,
+      "wt+proto": 339
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "ws+json": 360,
+      "ws+msgp": 214,
+      "ws+proto": 186,
+      "wt+msgp": 423,
+      "wt+proto": 345
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "ws+json": 351,
+      "ws+msgp": 175,
+      "ws+proto": 175,
+      "wt+msgp": 414,
+      "wt+proto": 356
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "ws+json": 343,
+      "ws+msgp": 193,
+      "ws+proto": 156,
+      "wt+msgp": 383,
+      "wt+proto": 332
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "ws+json": 386,
+      "ws+msgp": 179,
+      "ws+proto": 172,
+      "wt+msgp": 373,
+      "wt+proto": 346
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "ws+json": 358,
+      "ws+msgp": 194,
+      "ws+proto": 171,
+      "wt+msgp": 385,
+      "wt+proto": 326
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "ws+json": 362,
+      "ws+msgp": 179,
+      "ws+proto": 171,
+      "wt+msgp": 414,
+      "wt+proto": 356
+    }
+  ]
+}

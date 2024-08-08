@@ -1,0 +1,1724 @@
+<pre><font color="#76C7B7"><b>protobufsock</b></font><font color="#FDA331"> main *%=</font> <font color="#FB0120">e</font><font color="#FB0120"><b>130 </b></font><b>$</b> ./protobufsock                                                                     
+2024/08/08 21:10:02 webtransport listening on https://:4443/webtransport
+2024/08/08 21:10:02 certhash: 8a437f3ee80e686fab1bb7d694a22d904be893ce7e7be2f9bf8ee5bfe1bdb25c
+2024/08/08 21:10:02 websocket listening on https://:4080/websocket
+2024/08/08 21:10:02 failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 7168 kiB, got: 4096 kiB). See https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes for details.
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+1000 .. 2000 .. 3000 .. 4000 .. 5000 .. 6000 .. 7000 .. 8000 .. 9000 .. 10000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:35276 took <b>1001 ms</b>
+starting ws://proto bench
+1000 .. 2000 .. 3000 .. 4000 .. 5000 .. 6000 .. 7000 .. 8000 .. 9000 .. 10000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:35286 took <b>1042 ms</b>
+starting ws://msgp bench
+1000 .. 2000 .. 3000 .. 4000 .. 5000 .. 6000 .. 7000 .. 8000 .. 9000 .. 10000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:35292 took <b>1107 ms</b>
+starting wt://proto bench
+1000 .. 2000 .. 3000 .. 4000 .. 5000 .. 6000 .. 7000 .. 8000 .. 9000 .. 10000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:58155 took <b>1789 ms</b>
+starting wt://msgp bench
+1000 .. 2000 .. 3000 .. 4000 .. 5000 .. 6000 .. 7000 .. 8000 .. 9000 .. 10000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45157 took <b>3345 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:10000,&quot;ws+json&quot;:1001,&quot;ws+msgp&quot;:1107,&quot;ws+proto&quot;:1042,&quot;wt+msgp&quot;:3345,&quot;wt+proto&quot;:1789}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:45546 took <b>21 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45560 took <b>23 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45564 took <b>24 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:56115 took <b>43 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:56843 took <b>72 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:200,&quot;ws+json&quot;:21,&quot;ws+msgp&quot;:24,&quot;ws+proto&quot;:23,&quot;wt+msgp&quot;:72,&quot;wt+proto&quot;:43}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:45566 took <b>21 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45580 took <b>32 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45582 took <b>25 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:55549 took <b>46 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:47717 took <b>62 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:200,&quot;ws+json&quot;:21,&quot;ws+msgp&quot;:25,&quot;ws+proto&quot;:32,&quot;wt+msgp&quot;:62,&quot;wt+proto&quot;:46}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:45594 took <b>22 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45610 took <b>29 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45624 took <b>26 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:56032 took <b>43 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:57842 took <b>69 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:200,&quot;ws+json&quot;:22,&quot;ws+msgp&quot;:26,&quot;ws+proto&quot;:29,&quot;wt+msgp&quot;:69,&quot;wt+proto&quot;:43}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:45636 took <b>24 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45652 took <b>32 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45668 took <b>25 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:41867 took <b>36 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:52870 took <b>105 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:200,&quot;ws+json&quot;:24,&quot;ws+msgp&quot;:25,&quot;ws+proto&quot;:32,&quot;wt+msgp&quot;:105,&quot;wt+proto&quot;:36}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:45680 took <b>22 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45682 took <b>30 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45696 took <b>27 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:36927 took <b>37 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:50555 took <b>106 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:200,&quot;ws+json&quot;:22,&quot;ws+msgp&quot;:27,&quot;ws+proto&quot;:30,&quot;wt+msgp&quot;:106,&quot;wt+proto&quot;:37}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:45698 took <b>21 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45712 took <b>31 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45718 took <b>26 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:36003 took <b>35 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45991 took <b>61 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:200,&quot;ws+json&quot;:21,&quot;ws+msgp&quot;:26,&quot;ws+proto&quot;:31,&quot;wt+msgp&quot;:61,&quot;wt+proto&quot;:35}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:45724 took <b>23 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45726 took <b>38 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45732 took <b>23 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:40450 took <b>38 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:58647 took <b>73 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:200,&quot;ws+json&quot;:23,&quot;ws+msgp&quot;:23,&quot;ws+proto&quot;:38,&quot;wt+msgp&quot;:73,&quot;wt+proto&quot;:38}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:45748 took <b>20 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45762 took <b>35 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45764 took <b>23 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:50170 took <b>35 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45372 took <b>67 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:200,&quot;ws+json&quot;:20,&quot;ws+msgp&quot;:23,&quot;ws+proto&quot;:35,&quot;wt+msgp&quot;:67,&quot;wt+proto&quot;:35}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:45778 took <b>21 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45790 took <b>30 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45792 took <b>25 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45297 took <b>36 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:53123 took <b>68 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:200,&quot;ws+json&quot;:21,&quot;ws+msgp&quot;:25,&quot;ws+proto&quot;:30,&quot;wt+msgp&quot;:68,&quot;wt+proto&quot;:36}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:45806 took <b>20 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45820 took <b>31 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45832 took <b>23 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:49710 took <b>37 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:56846 took <b>70 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:200,&quot;ws+json&quot;:20,&quot;ws+msgp&quot;:23,&quot;ws+proto&quot;:31,&quot;wt+msgp&quot;:70,&quot;wt+proto&quot;:37}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:45844 took <b>21 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45846 took <b>31 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45854 took <b>28 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:52702 took <b>41 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:46645 took <b>81 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:200,&quot;ws+json&quot;:21,&quot;ws+msgp&quot;:28,&quot;ws+proto&quot;:31,&quot;wt+msgp&quot;:81,&quot;wt+proto&quot;:41}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:45862 took <b>24 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45874 took <b>31 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45884 took <b>26 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:42417 took <b>39 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:48285 took <b>75 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:200,&quot;ws+json&quot;:24,&quot;ws+msgp&quot;:26,&quot;ws+proto&quot;:31,&quot;wt+msgp&quot;:75,&quot;wt+proto&quot;:39}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:50860 took <b>25 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:50876 took <b>32 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:50884 took <b>24 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:46923 took <b>39 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:53465 took <b>77 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:200,&quot;ws+json&quot;:25,&quot;ws+msgp&quot;:24,&quot;ws+proto&quot;:32,&quot;wt+msgp&quot;:77,&quot;wt+proto&quot;:39}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:50898 took <b>24 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:50914 took <b>35 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:50918 took <b>27 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:49947 took <b>43 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:44296 took <b>58 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:200,&quot;ws+json&quot;:24,&quot;ws+msgp&quot;:27,&quot;ws+proto&quot;:35,&quot;wt+msgp&quot;:58,&quot;wt+proto&quot;:43}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:50926 took <b>24 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:50940 took <b>32 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:50952 took <b>27 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:46621 took <b>46 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:54234 took <b>58 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:200,&quot;ws+json&quot;:24,&quot;ws+msgp&quot;:27,&quot;ws+proto&quot;:32,&quot;wt+msgp&quot;:58,&quot;wt+proto&quot;:46}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:50956 took <b>22 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:50970 took <b>31 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:50980 took <b>26 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:58425 took <b>47 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:58762 took <b>65 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:200,&quot;ws+json&quot;:22,&quot;ws+msgp&quot;:26,&quot;ws+proto&quot;:31,&quot;wt+msgp&quot;:65,&quot;wt+proto&quot;:47}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:50996 took <b>25 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51000 took <b>31 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51008 took <b>28 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:52541 took <b>49 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:36444 took <b>57 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:200,&quot;ws+json&quot;:25,&quot;ws+msgp&quot;:28,&quot;ws+proto&quot;:31,&quot;wt+msgp&quot;:57,&quot;wt+proto&quot;:49}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51018 took <b>23 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51032 took <b>30 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51036 took <b>26 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:42729 took <b>43 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:50292 took <b>59 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:200,&quot;ws+json&quot;:23,&quot;ws+msgp&quot;:26,&quot;ws+proto&quot;:30,&quot;wt+msgp&quot;:59,&quot;wt+proto&quot;:43}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51052 took <b>33 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51062 took <b>51 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51068 took <b>22 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:35457 took <b>48 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:56838 took <b>70 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:200,&quot;ws+json&quot;:33,&quot;ws+msgp&quot;:22,&quot;ws+proto&quot;:51,&quot;wt+msgp&quot;:70,&quot;wt+proto&quot;:48}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51076 took <b>21 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51078 took <b>31 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51080 took <b>24 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:55926 took <b>36 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:53646 took <b>71 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:200,&quot;ws+json&quot;:21,&quot;ws+msgp&quot;:24,&quot;ws+proto&quot;:31,&quot;wt+msgp&quot;:71,&quot;wt+proto&quot;:36}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51084 took <b>22 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51094 took <b>31 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51110 took <b>29 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:36497 took <b>40 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:47095 took <b>64 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:200,&quot;ws+json&quot;:22,&quot;ws+msgp&quot;:29,&quot;ws+proto&quot;:31,&quot;wt+msgp&quot;:64,&quot;wt+proto&quot;:40}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51116 took <b>23 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51128 took <b>32 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51136 took <b>29 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:36309 took <b>50 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:52859 took <b>59 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:200,&quot;ws+json&quot;:23,&quot;ws+msgp&quot;:29,&quot;ws+proto&quot;:32,&quot;wt+msgp&quot;:59,&quot;wt+proto&quot;:50}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51140 took <b>24 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51148 took <b>31 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51160 took <b>26 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:37328 took <b>39 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:37895 took <b>78 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:200,&quot;ws+json&quot;:24,&quot;ws+msgp&quot;:26,&quot;ws+proto&quot;:31,&quot;wt+msgp&quot;:78,&quot;wt+proto&quot;:39}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51170 took <b>22 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51186 took <b>30 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51200 took <b>24 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:37588 took <b>41 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:56401 took <b>80 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:200,&quot;ws+json&quot;:22,&quot;ws+msgp&quot;:24,&quot;ws+proto&quot;:30,&quot;wt+msgp&quot;:80,&quot;wt+proto&quot;:41}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51212 took <b>22 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51214 took <b>38 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51224 took <b>24 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:42942 took <b>38 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:47085 took <b>67 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:200,&quot;ws+json&quot;:22,&quot;ws+msgp&quot;:24,&quot;ws+proto&quot;:38,&quot;wt+msgp&quot;:67,&quot;wt+proto&quot;:38}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51236 took <b>26 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51246 took <b>30 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51260 took <b>27 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:55622 took <b>46 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:44828 took <b>56 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:200,&quot;ws+json&quot;:26,&quot;ws+msgp&quot;:27,&quot;ws+proto&quot;:30,&quot;wt+msgp&quot;:56,&quot;wt+proto&quot;:46}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51272 took <b>23 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51288 took <b>33 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51300 took <b>26 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:49403 took <b>43 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:52670 took <b>61 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:200,&quot;ws+json&quot;:23,&quot;ws+msgp&quot;:26,&quot;ws+proto&quot;:33,&quot;wt+msgp&quot;:61,&quot;wt+proto&quot;:43}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51306 took <b>24 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51312 took <b>35 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51322 took <b>22 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:41342 took <b>39 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:36192 took <b>61 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:200,&quot;ws+json&quot;:24,&quot;ws+msgp&quot;:22,&quot;ws+proto&quot;:35,&quot;wt+msgp&quot;:61,&quot;wt+proto&quot;:39}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51336 took <b>24 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51344 took <b>31 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51346 took <b>25 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:43538 took <b>35 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:60178 took <b>62 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:200,&quot;ws+json&quot;:24,&quot;ws+msgp&quot;:25,&quot;ws+proto&quot;:31,&quot;wt+msgp&quot;:62,&quot;wt+proto&quot;:35}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51360 took <b>23 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51376 took <b>30 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51384 took <b>23 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:53650 took <b>46 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:39761 took <b>61 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:200,&quot;ws+json&quot;:23,&quot;ws+msgp&quot;:23,&quot;ws+proto&quot;:30,&quot;wt+msgp&quot;:61,&quot;wt+proto&quot;:46}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51386 took <b>28 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51392 took <b>34 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51396 took <b>26 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:46959 took <b>42 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:40113 took <b>66 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:200,&quot;ws+json&quot;:28,&quot;ws+msgp&quot;:26,&quot;ws+proto&quot;:34,&quot;wt+msgp&quot;:66,&quot;wt+proto&quot;:42}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51402 took <b>29 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51418 took <b>33 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51426 took <b>29 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:52170 took <b>42 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:33749 took <b>105 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:200,&quot;ws+json&quot;:29,&quot;ws+msgp&quot;:29,&quot;ws+proto&quot;:33,&quot;wt+msgp&quot;:105,&quot;wt+proto&quot;:42}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51430 took <b>35 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51446 took <b>38 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51456 took <b>26 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:58800 took <b>47 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:40425 took <b>59 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:200,&quot;ws+json&quot;:35,&quot;ws+msgp&quot;:26,&quot;ws+proto&quot;:38,&quot;wt+msgp&quot;:59,&quot;wt+proto&quot;:47}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:51458 took <b>31 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51474 took <b>37 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51488 took <b>24 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:54065 took <b>40 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:41868 took <b>61 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:200,&quot;ws+json&quot;:31,&quot;ws+msgp&quot;:24,&quot;ws+proto&quot;:37,&quot;wt+msgp&quot;:61,&quot;wt+proto&quot;:40}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:37800 took <b>27 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:37802 took <b>36 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:37808 took <b>27 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:36883 took <b>43 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51755 took <b>66 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:200,&quot;ws+json&quot;:27,&quot;ws+msgp&quot;:27,&quot;ws+proto&quot;:36,&quot;wt+msgp&quot;:66,&quot;wt+proto&quot;:43}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:37820 took <b>25 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:37830 took <b>32 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:37846 took <b>28 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:50023 took <b>39 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:35391 took <b>64 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:200,&quot;ws+json&quot;:25,&quot;ws+msgp&quot;:28,&quot;ws+proto&quot;:32,&quot;wt+msgp&quot;:64,&quot;wt+proto&quot;:39}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:37860 took <b>28 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:37876 took <b>33 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:37878 took <b>26 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:37896 took <b>43 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:53830 took <b>68 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:200,&quot;ws+json&quot;:28,&quot;ws+msgp&quot;:26,&quot;ws+proto&quot;:33,&quot;wt+msgp&quot;:68,&quot;wt+proto&quot;:43}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:37880 took <b>28 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:37886 took <b>36 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:37900 took <b>25 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:48982 took <b>44 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:57389 took <b>83 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:200,&quot;ws+json&quot;:28,&quot;ws+msgp&quot;:25,&quot;ws+proto&quot;:36,&quot;wt+msgp&quot;:83,&quot;wt+proto&quot;:44}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:37916 took <b>29 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:37920 took <b>42 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:37926 took <b>28 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:52065 took <b>49 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:46936 took <b>73 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:200,&quot;ws+json&quot;:29,&quot;ws+msgp&quot;:28,&quot;ws+proto&quot;:42,&quot;wt+msgp&quot;:73,&quot;wt+proto&quot;:49}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:37930 took <b>27 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:37946 took <b>34 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:37952 took <b>27 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:55495 took <b>42 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:34063 took <b>62 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:200,&quot;ws+json&quot;:27,&quot;ws+msgp&quot;:27,&quot;ws+proto&quot;:34,&quot;wt+msgp&quot;:62,&quot;wt+proto&quot;:42}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:37960 took <b>372 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:37962 took <b>172 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:37974 took <b>169 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51288 took <b>332 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:44000 took <b>321 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:200,&quot;ws+json&quot;:372,&quot;ws+msgp&quot;:169,&quot;ws+proto&quot;:172,&quot;wt+msgp&quot;:321,&quot;wt+proto&quot;:332}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:37982 took <b>349 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:37992 took <b>167 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:37994 took <b>185 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:56296 took <b>326 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:49624 took <b>365 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:200,&quot;ws+json&quot;:349,&quot;ws+msgp&quot;:185,&quot;ws+proto&quot;:167,&quot;wt+msgp&quot;:365,&quot;wt+proto&quot;:326}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:38000 took <b>342 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:38012 took <b>157 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:38018 took <b>173 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:36197 took <b>344 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:34983 took <b>363 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:200,&quot;ws+json&quot;:342,&quot;ws+msgp&quot;:173,&quot;ws+proto&quot;:157,&quot;wt+msgp&quot;:363,&quot;wt+proto&quot;:344}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:38020 took <b>353 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:38032 took <b>166 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:38046 took <b>184 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:38031 took <b>339 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:34354 took <b>359 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:200,&quot;ws+json&quot;:353,&quot;ws+msgp&quot;:184,&quot;ws+proto&quot;:166,&quot;wt+msgp&quot;:359,&quot;wt+proto&quot;:339}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:38052 took <b>360 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:38066 took <b>186 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:38082 took <b>214 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:58323 took <b>345 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:55277 took <b>423 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:200,&quot;ws+json&quot;:360,&quot;ws+msgp&quot;:214,&quot;ws+proto&quot;:186,&quot;wt+msgp&quot;:423,&quot;wt+proto&quot;:345}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:38718 took <b>351 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:38728 took <b>175 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:38730 took <b>175 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:54051 took <b>356 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:37698 took <b>414 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:200,&quot;ws+json&quot;:351,&quot;ws+msgp&quot;:175,&quot;ws+proto&quot;:175,&quot;wt+msgp&quot;:414,&quot;wt+proto&quot;:356}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:38736 took <b>343 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:38738 took <b>156 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:38746 took <b>193 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:59364 took <b>332 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:39139 took <b>383 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:200,&quot;ws+json&quot;:343,&quot;ws+msgp&quot;:193,&quot;ws+proto&quot;:156,&quot;wt+msgp&quot;:383,&quot;wt+proto&quot;:332}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:38760 took <b>386 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:38766 took <b>172 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:38770 took <b>179 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:41939 took <b>346 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:41513 took <b>373 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:200,&quot;ws+json&quot;:386,&quot;ws+msgp&quot;:179,&quot;ws+proto&quot;:172,&quot;wt+msgp&quot;:373,&quot;wt+proto&quot;:346}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:38778 took <b>358 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:38790 took <b>171 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:38800 took <b>194 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:50202 took <b>326 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:36273 took <b>385 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:200,&quot;ws+json&quot;:358,&quot;ws+msgp&quot;:194,&quot;ws+proto&quot;:171,&quot;wt+msgp&quot;:385,&quot;wt+proto&quot;:326}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:38814 took <b>362 ms</b>
+starting ws://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:38830 took <b>171 ms</b>
+starting ws://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:38834 took <b>179 ms</b>
+starting wt://proto bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:48303 took <b>356 ms</b>
+starting wt://msgp bench
+20 .. 40 .. 60 .. 80 .. 100 .. 120 .. 140 .. 160 .. 180 .. 200 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:40033 took <b>414 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:200,&quot;ws+json&quot;:362,&quot;ws+msgp&quot;:179,&quot;ws+proto&quot;:171,&quot;wt+msgp&quot;:414,&quot;wt+proto&quot;:356}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:33784 took <b>227 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:33788 took <b>235 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:33792 took <b>258 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:33131 took <b>379 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:34400 took <b>610 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:2000,&quot;ws+json&quot;:227,&quot;ws+msgp&quot;:258,&quot;ws+proto&quot;:235,&quot;wt+msgp&quot;:610,&quot;wt+proto&quot;:379}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:33804 took <b>244 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:34330 took <b>219 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:34336 took <b>238 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:34764 took <b>371 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:43803 took <b>624 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:2000,&quot;ws+json&quot;:244,&quot;ws+msgp&quot;:238,&quot;ws+proto&quot;:219,&quot;wt+msgp&quot;:624,&quot;wt+proto&quot;:371}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:34338 took <b>237 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:34348 took <b>217 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:34352 took <b>234 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:42997 took <b>378 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:43470 took <b>615 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:2000,&quot;ws+json&quot;:237,&quot;ws+msgp&quot;:234,&quot;ws+proto&quot;:217,&quot;wt+msgp&quot;:615,&quot;wt+proto&quot;:378}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:34368 took <b>222 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:34376 took <b>225 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:34388 took <b>261 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:59751 took <b>377 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:46323 took <b>709 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:2000,&quot;ws+json&quot;:222,&quot;ws+msgp&quot;:261,&quot;ws+proto&quot;:225,&quot;wt+msgp&quot;:709,&quot;wt+proto&quot;:377}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:34396 took <b>220 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:34400 took <b>245 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:34414 took <b>252 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:55174 took <b>389 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:38624 took <b>669 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:2000,&quot;ws+json&quot;:220,&quot;ws+msgp&quot;:252,&quot;ws+proto&quot;:245,&quot;wt+msgp&quot;:669,&quot;wt+proto&quot;:389}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:34424 took <b>231 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:34432 took <b>239 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:34446 took <b>255 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:41933 took <b>403 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:43436 took <b>673 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:2000,&quot;ws+json&quot;:231,&quot;ws+msgp&quot;:255,&quot;ws+proto&quot;:239,&quot;wt+msgp&quot;:673,&quot;wt+proto&quot;:403}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:34450 took <b>220 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:33886 took <b>243 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:33898 took <b>267 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:41694 took <b>410 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:35732 took <b>671 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:2000,&quot;ws+json&quot;:220,&quot;ws+msgp&quot;:267,&quot;ws+proto&quot;:243,&quot;wt+msgp&quot;:671,&quot;wt+proto&quot;:410}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:33904 took <b>228 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:33920 took <b>228 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:33934 took <b>245 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:44758 took <b>393 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:43861 took <b>680 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:2000,&quot;ws+json&quot;:228,&quot;ws+msgp&quot;:245,&quot;ws+proto&quot;:228,&quot;wt+msgp&quot;:680,&quot;wt+proto&quot;:393}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:33950 took <b>294 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:33964 took <b>239 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:33978 took <b>272 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:33000 took <b>416 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:50614 took <b>690 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:2000,&quot;ws+json&quot;:294,&quot;ws+msgp&quot;:272,&quot;ws+proto&quot;:239,&quot;wt+msgp&quot;:690,&quot;wt+proto&quot;:416}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:33992 took <b>234 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:33998 took <b>237 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:34002 took <b>252 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:46504 took <b>402 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:47818 took <b>697 ms</b>
+{&quot;addNoise&quot;:0,&quot;countTo&quot;:2000,&quot;ws+json&quot;:234,&quot;ws+msgp&quot;:252,&quot;ws+proto&quot;:237,&quot;wt+msgp&quot;:697,&quot;wt+proto&quot;:402}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:34016 took <b>279 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:34018 took <b>250 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:34034 took <b>260 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:53969 took <b>425 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:48176 took <b>720 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:2000,&quot;ws+json&quot;:279,&quot;ws+msgp&quot;:260,&quot;ws+proto&quot;:250,&quot;wt+msgp&quot;:720,&quot;wt+proto&quot;:425}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:46534 took <b>265 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:46542 took <b>300 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:46548 took <b>280 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:58288 took <b>415 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:48984 took <b>745 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:2000,&quot;ws+json&quot;:265,&quot;ws+msgp&quot;:280,&quot;ws+proto&quot;:300,&quot;wt+msgp&quot;:745,&quot;wt+proto&quot;:415}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:46560 took <b>240 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:46574 took <b>240 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:46588 took <b>259 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:58889 took <b>419 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:51512 took <b>696 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:2000,&quot;ws+json&quot;:240,&quot;ws+msgp&quot;:259,&quot;ws+proto&quot;:240,&quot;wt+msgp&quot;:696,&quot;wt+proto&quot;:419}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:46600 took <b>241 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:46610 took <b>255 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:46626 took <b>258 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:41022 took <b>403 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:46907 took <b>719 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:2000,&quot;ws+json&quot;:241,&quot;ws+msgp&quot;:258,&quot;ws+proto&quot;:255,&quot;wt+msgp&quot;:719,&quot;wt+proto&quot;:403}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:46634 took <b>233 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:46644 took <b>240 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:46646 took <b>253 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:43335 took <b>424 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:44779 took <b>686 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:2000,&quot;ws+json&quot;:233,&quot;ws+msgp&quot;:253,&quot;ws+proto&quot;:240,&quot;wt+msgp&quot;:686,&quot;wt+proto&quot;:424}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:46650 took <b>238 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:46656 took <b>248 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:46666 took <b>254 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:35403 took <b>420 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:38981 took <b>728 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:2000,&quot;ws+json&quot;:238,&quot;ws+msgp&quot;:254,&quot;ws+proto&quot;:248,&quot;wt+msgp&quot;:728,&quot;wt+proto&quot;:420}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:59136 took <b>238 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:59140 took <b>243 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:59154 took <b>259 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:48196 took <b>427 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:47137 took <b>689 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:2000,&quot;ws+json&quot;:238,&quot;ws+msgp&quot;:259,&quot;ws+proto&quot;:243,&quot;wt+msgp&quot;:689,&quot;wt+proto&quot;:427}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:59166 took <b>243 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:59182 took <b>247 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:59192 took <b>257 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:56680 took <b>414 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:40574 took <b>733 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:2000,&quot;ws+json&quot;:243,&quot;ws+msgp&quot;:257,&quot;ws+proto&quot;:247,&quot;wt+msgp&quot;:733,&quot;wt+proto&quot;:414}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:59206 took <b>250 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:59208 took <b>242 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:59224 took <b>312 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:44787 took <b>408 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:48792 took <b>700 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:2000,&quot;ws+json&quot;:250,&quot;ws+msgp&quot;:312,&quot;ws+proto&quot;:242,&quot;wt+msgp&quot;:700,&quot;wt+proto&quot;:408}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:59234 took <b>238 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:59250 took <b>244 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:59254 took <b>258 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:46099 took <b>397 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:58816 took <b>739 ms</b>
+{&quot;addNoise&quot;:32,&quot;countTo&quot;:2000,&quot;ws+json&quot;:238,&quot;ws+msgp&quot;:258,&quot;ws+proto&quot;:244,&quot;wt+msgp&quot;:739,&quot;wt+proto&quot;:397}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:59256 took <b>247 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:59268 took <b>247 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:39036 took <b>347 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:53585 took <b>426 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:55953 took <b>700 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:2000,&quot;ws+json&quot;:247,&quot;ws+msgp&quot;:347,&quot;ws+proto&quot;:247,&quot;wt+msgp&quot;:700,&quot;wt+proto&quot;:426}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:39040 took <b>246 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:39042 took <b>256 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:39048 took <b>267 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:33004 took <b>416 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:53735 took <b>739 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:2000,&quot;ws+json&quot;:246,&quot;ws+msgp&quot;:267,&quot;ws+proto&quot;:256,&quot;wt+msgp&quot;:739,&quot;wt+proto&quot;:416}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:39052 took <b>246 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:39054 took <b>242 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:39058 took <b>347 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:46646 took <b>417 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:60621 took <b>716 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:2000,&quot;ws+json&quot;:246,&quot;ws+msgp&quot;:347,&quot;ws+proto&quot;:242,&quot;wt+msgp&quot;:716,&quot;wt+proto&quot;:417}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:39070 took <b>240 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:39084 took <b>251 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:39088 took <b>271 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:44069 took <b>406 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:37713 took <b>742 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:2000,&quot;ws+json&quot;:240,&quot;ws+msgp&quot;:271,&quot;ws+proto&quot;:251,&quot;wt+msgp&quot;:742,&quot;wt+proto&quot;:406}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:39092 took <b>245 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:39104 took <b>281 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:39108 took <b>336 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:56375 took <b>421 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:39313 took <b>709 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:2000,&quot;ws+json&quot;:245,&quot;ws+msgp&quot;:336,&quot;ws+proto&quot;:281,&quot;wt+msgp&quot;:709,&quot;wt+proto&quot;:421}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:44652 took <b>251 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:44668 took <b>267 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:44676 took <b>281 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:37438 took <b>474 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:54471 took <b>750 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:2000,&quot;ws+json&quot;:251,&quot;ws+msgp&quot;:281,&quot;ws+proto&quot;:267,&quot;wt+msgp&quot;:750,&quot;wt+proto&quot;:474}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:44682 took <b>254 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:44684 took <b>386 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:44690 took <b>292 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45825 took <b>435 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:43317 took <b>717 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:2000,&quot;ws+json&quot;:254,&quot;ws+msgp&quot;:292,&quot;ws+proto&quot;:386,&quot;wt+msgp&quot;:717,&quot;wt+proto&quot;:435}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:44698 took <b>246 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:44706 took <b>256 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:44718 took <b>268 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:59278 took <b>470 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:40559 took <b>708 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:2000,&quot;ws+json&quot;:246,&quot;ws+msgp&quot;:268,&quot;ws+proto&quot;:256,&quot;wt+msgp&quot;:708,&quot;wt+proto&quot;:470}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:44720 took <b>302 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:44736 took <b>324 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:44740 took <b>275 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:37255 took <b>421 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:42725 took <b>704 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:2000,&quot;ws+json&quot;:302,&quot;ws+msgp&quot;:275,&quot;ws+proto&quot;:324,&quot;wt+msgp&quot;:704,&quot;wt+proto&quot;:421}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:44756 took <b>249 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:44772 took <b>301 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:41064 took <b>283 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:55691 took <b>432 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:56453 took <b>714 ms</b>
+{&quot;addNoise&quot;:256,&quot;countTo&quot;:2000,&quot;ws+json&quot;:249,&quot;ws+msgp&quot;:283,&quot;ws+proto&quot;:301,&quot;wt+msgp&quot;:714,&quot;wt+proto&quot;:432}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:41078 took <b>342 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:41082 took <b>320 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:41098 took <b>294 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:44582 took <b>439 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:58301 took <b>741 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:2000,&quot;ws+json&quot;:342,&quot;ws+msgp&quot;:294,&quot;ws+proto&quot;:320,&quot;wt+msgp&quot;:741,&quot;wt+proto&quot;:439}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:41104 took <b>343 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:41114 took <b>280 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:41128 took <b>305 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45211 took <b>440 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:52149 took <b>735 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:2000,&quot;ws+json&quot;:343,&quot;ws+msgp&quot;:305,&quot;ws+proto&quot;:280,&quot;wt+msgp&quot;:735,&quot;wt+proto&quot;:440}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:41142 took <b>287 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:41152 took <b>275 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:41166 took <b>298 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:50116 took <b>447 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:54822 took <b>760 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:2000,&quot;ws+json&quot;:287,&quot;ws+msgp&quot;:298,&quot;ws+proto&quot;:275,&quot;wt+msgp&quot;:760,&quot;wt+proto&quot;:447}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:41180 took <b>282 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:41184 took <b>272 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:41190 took <b>289 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:47505 took <b>440 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:50144 took <b>744 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:2000,&quot;ws+json&quot;:282,&quot;ws+msgp&quot;:289,&quot;ws+proto&quot;:272,&quot;wt+msgp&quot;:744,&quot;wt+proto&quot;:440}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:43232 took <b>294 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:43236 took <b>275 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:43242 took <b>303 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:48846 took <b>439 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:49333 took <b>777 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:2000,&quot;ws+json&quot;:294,&quot;ws+msgp&quot;:303,&quot;ws+proto&quot;:275,&quot;wt+msgp&quot;:777,&quot;wt+proto&quot;:439}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:43254 took <b>285 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:43268 took <b>277 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:43270 took <b>290 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:47743 took <b>463 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:43752 took <b>740 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:2000,&quot;ws+json&quot;:285,&quot;ws+msgp&quot;:290,&quot;ws+proto&quot;:277,&quot;wt+msgp&quot;:740,&quot;wt+proto&quot;:463}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:43272 took <b>285 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:43284 took <b>290 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:43296 took <b>298 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:54628 took <b>489 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:56633 took <b>745 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:2000,&quot;ws+json&quot;:285,&quot;ws+msgp&quot;:298,&quot;ws+proto&quot;:290,&quot;wt+msgp&quot;:745,&quot;wt+proto&quot;:489}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:43298 took <b>291 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:43302 took <b>289 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:43304 took <b>373 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45494 took <b>443 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:52954 took <b>726 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:2000,&quot;ws+json&quot;:291,&quot;ws+msgp&quot;:373,&quot;ws+proto&quot;:289,&quot;wt+msgp&quot;:726,&quot;wt+proto&quot;:443}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:50618 took <b>287 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:50624 took <b>330 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:50626 took <b>294 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45163 took <b>431 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:48385 took <b>713 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:2000,&quot;ws+json&quot;:287,&quot;ws+msgp&quot;:294,&quot;ws+proto&quot;:330,&quot;wt+msgp&quot;:713,&quot;wt+proto&quot;:431}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:50630 took <b>281 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:50636 took <b>377 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:50646 took <b>298 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:51177 took <b>446 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:47937 took <b>775 ms</b>
+{&quot;addNoise&quot;:1024,&quot;countTo&quot;:2000,&quot;ws+json&quot;:281,&quot;ws+msgp&quot;:298,&quot;ws+proto&quot;:377,&quot;wt+msgp&quot;:775,&quot;wt+proto&quot;:446}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:50650 took <b>3274 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:50658 took <b>1480 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:50672 took <b>1569 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:54308 took <b>3213 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:36515 took <b>3597 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:2000,&quot;ws+json&quot;:3274,&quot;ws+msgp&quot;:1569,&quot;ws+proto&quot;:1480,&quot;wt+msgp&quot;:3597,&quot;wt+proto&quot;:3213}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:39328 took <b>3317 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:48318 took <b>1472 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:48322 took <b>1610 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:49084 took <b>3201 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:56009 took <b>3920 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:2000,&quot;ws+json&quot;:3317,&quot;ws+msgp&quot;:1610,&quot;ws+proto&quot;:1472,&quot;wt+msgp&quot;:3920,&quot;wt+proto&quot;:3201}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:54670 took <b>3312 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:54678 took <b>1511 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:54682 took <b>1584 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:55280 took <b>3197 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:39262 took <b>3927 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:2000,&quot;ws+json&quot;:3312,&quot;ws+msgp&quot;:1584,&quot;ws+proto&quot;:1511,&quot;wt+msgp&quot;:3927,&quot;wt+proto&quot;:3197}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:49292 took <b>3271 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:49304 took <b>1517 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45634 took <b>1562 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:57407 took <b>3218 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:40724 took <b>4076 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:2000,&quot;ws+json&quot;:3271,&quot;ws+msgp&quot;:1562,&quot;ws+proto&quot;:1517,&quot;wt+msgp&quot;:4076,&quot;wt+proto&quot;:3218}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:52308 took <b>3272 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:52318 took <b>1486 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:52332 took <b>1594 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:59448 took <b>3267 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:46538 took <b>3919 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:2000,&quot;ws+json&quot;:3272,&quot;ws+msgp&quot;:1594,&quot;ws+proto&quot;:1486,&quot;wt+msgp&quot;:3919,&quot;wt+proto&quot;:3267}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:40648 took <b>3299 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:40660 took <b>1483 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:40676 took <b>1609 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:47931 took <b>3213 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:33905 took <b>3929 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:2000,&quot;ws+json&quot;:3299,&quot;ws+msgp&quot;:1609,&quot;ws+proto&quot;:1483,&quot;wt+msgp&quot;:3929,&quot;wt+proto&quot;:3213}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:59664 took <b>3315 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:53184 took <b>1531 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:53194 took <b>1630 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:41828 took <b>3178 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:45798 took <b>3905 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:2000,&quot;ws+json&quot;:3315,&quot;ws+msgp&quot;:1630,&quot;ws+proto&quot;:1531,&quot;wt+msgp&quot;:3905,&quot;wt+proto&quot;:3178}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:41850 took <b>3330 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:41856 took <b>1479 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:41868 took <b>1566 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:40821 took <b>3223 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:60555 took <b>3899 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:2000,&quot;ws+json&quot;:3330,&quot;ws+msgp&quot;:1566,&quot;ws+proto&quot;:1479,&quot;wt+msgp&quot;:3899,&quot;wt+proto&quot;:3223}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:45298 took <b>3373 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:45310 took <b>1517 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:52872 took <b>1624 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:55541 took <b>3179 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:42215 took <b>4043 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:2000,&quot;ws+json&quot;:3373,&quot;ws+msgp&quot;:1624,&quot;ws+proto&quot;:1517,&quot;wt+msgp&quot;:4043,&quot;wt+proto&quot;:3179}
+- 8&lt;- - - - - - - - - snip here - - - - - - - - -
+starting ws://json bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#D381C3">json</font> benchmark with 127.0.0.1:52874 took <b>3238 ms</b>
+starting ws://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:54228 took <b>1515 ms</b>
+starting ws://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#A1C659">ws://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:54238 took <b>1580 ms</b>
+starting wt://proto bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FB0120">proto</font> benchmark with 127.0.0.1:33054 took <b>3201 ms</b>
+starting wt://msgp bench
+200 .. 400 .. 600 .. 800 .. 1000 .. 1200 .. 1400 .. 1600 .. 1800 .. 2000 .. done!
+<font color="#6FB3D2">wt://</font><font color="#FDA331">msgp</font> benchmark with 127.0.0.1:33182 took <b>3934 ms</b>
+{&quot;addNoise&quot;:65536,&quot;countTo&quot;:2000,&quot;ws+json&quot;:3238,&quot;ws+msgp&quot;:1580,&quot;ws+proto&quot;:1515,&quot;wt+msgp&quot;:3934,&quot;wt+proto&quot;:3201}
+
+</pre>

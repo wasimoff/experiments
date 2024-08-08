@@ -95,10 +95,20 @@ func EphemeralTLS() (*tls.Config, string) {
 		PrivateKey:  privkey,
 	}
 	// create a tls.Config using it
-	conf := &tls.Config{
-		Certificates: []tls.Certificate{newcert},
-	}
+	conf := &tls.Config{Certificates: []tls.Certificate{newcert}}
 	sum := sha256.Sum256(newcert.Leaf.Raw)
+	certhash := hex.EncodeToString(sum[:])
+	return conf, certhash
+}
+
+// use ../../prototype/broker/net/server/cert/gencerts.sh to create keys
+func LoadTLS(certfile, keyfile string) (*tls.Config, string) {
+	cert, err := tls.LoadX509KeyPair(certfile, keyfile)
+	if err != nil {
+		log.Fatalf("failed loading keypair: %s", err)
+	}
+	conf := &tls.Config{Certificates: []tls.Certificate{cert}}
+	sum := sha256.Sum256(cert.Certificate[len(cert.Certificate)-1])
 	certhash := hex.EncodeToString(sum[:])
 	return conf, certhash
 }

@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"sync/atomic"
+	"strconv"
 	"time"
 
 	"github.com/gorilla/websocket"
@@ -17,22 +17,19 @@ import (
 	"github.com/vmihailenco/msgpack/v5"
 	"google.golang.org/protobuf/encoding/protodelim"
 	"google.golang.org/protobuf/proto"
-	"google.golang.org/protobuf/types/known/anypb"
 )
 
 //! generate the protobuf definitions
 //go:generate protoc --go_out=paths=source_relative:./ messages.proto
 
-// global sequence counter
-var globalSequence atomic.Uint64
-
-const countTo = 10000
-const addNoise = 2048
+var addNoise uint64 = 0
+var countTo uint64 = 1000
+var results = make(map[string]int64)
 
 func main() {
 
 	// ephemeral TLS
-	tlsconf, certhash := EphemeralTLS()
+	tlsconf, certhash := LoadTLS("localhost.crt", "localhost.key")
 
 	// hello world in root, just to have something to accept selfsigned cert
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
@@ -40,9 +37,36 @@ func main() {
 		w.Write([]byte("Hello, World!"))
 	})
 
+	// print a horizontal ruler when this route is accessed
+	http.HandleFunc("/measure/new", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Add("access-control-allow-origin", "*")
+		fmt.Println("- 8<- - - - - - - - - snip here - - - - - - - - -")
+		if u, err := strconv.ParseUint(r.URL.Query().Get("count"), 10, 0); err == nil {
+			countTo = u
+		}
+		if u, err := strconv.ParseUint(r.URL.Query().Get("noise"), 10, 0); err == nil {
+			addNoise = u
+		}
+		results = make(map[string]int64)
+		results["countTo"] = int64(countTo)
+		results["addNoise"] = int64(addNoise)
+	})
+
+	// dump measurements as json when this route is accessed
+	http.HandleFunc("/measure/dump", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Add("access-control-allow-origin", "*")
+		if buf, err := json.Marshal(results); err == nil {
+			w.Header().Add("content-type", "application/json")
+			w.Write(buf)
+			fmt.Println(string(buf))
+		} else {
+			w.WriteHeader(500)
+		}
+	})
+
 	// ---------- websocket ---------- //
 
-	// --> protobuf benchmark
+	// WebSocket + Protobuf
 	http.HandleFunc("/websocket/bench/proto", func(w http.ResponseWriter, r *http.Request) {
 		upgrader := websocket.Upgrader{CheckOrigin: func(r *http.Request) bool { return true }}
 		conn, err := upgrader.Upgrade(w, r, nil)
@@ -54,7 +78,7 @@ func main() {
 
 		// count to limit and measure time
 		t0 := time.Now().UnixMilli()
-		fmt.Printf("starting ws://proto bench at %d\n", t0)
+		fmt.Printf("starting ws://proto bench\n")
 		sequence := make(chan uint64, 10)
 		sequence <- 0
 		// receiver
@@ -68,7 +92,7 @@ func main() {
 				if err := proto.Unmarshal(buf, ct); err != nil {
 					log.Fatalf("unmarshal: %s", err)
 				}
-				if (ct.Seq % 1000) == 0 {
+				if (ct.Seq % (countTo / 10)) == 0 {
 					fmt.Printf("%d .. ", ct.Seq)
 				}
 				if ct.Seq == countTo {
@@ -95,11 +119,12 @@ func main() {
 			}
 		}
 		// measure elapsed time
-		t1 := time.Now().UnixMilli()
-		fmt.Printf("\033[32mws://proto\033[0m benchmark with %s took \033[1m%d ms\033[0m\n", conn.RemoteAddr(), t1-t0)
+		elapsed := time.Now().UnixMilli() - t0
+		fmt.Printf("\033[32mws://\033[31mproto\033[0m benchmark with %s took \033[1m%d ms\033[0m\n", conn.RemoteAddr(), elapsed)
+		results["ws+proto"] = elapsed
 	})
 
-	// --> json benchmark
+	// WebSocket + JSON
 	http.HandleFunc("/websocket/bench/json", func(w http.ResponseWriter, r *http.Request) {
 		upgrader := websocket.Upgrader{CheckOrigin: func(r *http.Request) bool { return true }}
 		conn, err := upgrader.Upgrade(w, r, nil)
@@ -111,21 +136,17 @@ func main() {
 
 		// count to limit and measure time
 		t0 := time.Now().UnixMilli()
-		fmt.Printf("starting ws://json bench at %d\n", t0)
+		fmt.Printf("starting ws://json bench\n")
 		sequence := make(chan uint64, 10)
 		sequence <- 0
 		// receiver
 		go func() {
 			for {
-				mt, buf, err := conn.ReadMessage()
-				if err != nil || mt != websocket.TextMessage {
-					log.Fatalf("reading message: %v, %s", mt, err)
-				}
 				ct := new(Counter)
-				if err := json.Unmarshal(buf, ct); err != nil {
+				if err := conn.ReadJSON(ct); err != nil {
 					log.Fatalf("unmarshal: %s", err)
 				}
-				if (ct.Seq % 1000) == 0 {
+				if (ct.Seq % (countTo / 10)) == 0 {
 					fmt.Printf("%d .. ", ct.Seq)
 				}
 				if ct.Seq == countTo {
@@ -143,25 +164,80 @@ func main() {
 			if addNoise > 0 {
 				counter.Noise = noise(addNoise)
 			}
-			m, err := json.Marshal(counter)
-			if err != nil {
-				log.Fatalf("marshalling counter: %s", err)
-			}
-			if err := conn.WriteMessage(websocket.TextMessage, m); err != nil {
+			if err := conn.WriteJSON(counter); err != nil {
 				log.Fatalf("writing message: %s", err)
 			}
 		}
 		// measure elapsed time
-		t1 := time.Now().UnixMilli()
-		fmt.Printf("\033[36mws://json\033[0m benchmark with %s took \033[1m%d ms\033[0m\n", conn.RemoteAddr(), t1-t0)
+		elapsed := time.Now().UnixMilli() - t0
+		fmt.Printf("\033[32mws://\033[35mjson\033[0m benchmark with %s took \033[1m%d ms\033[0m\n", conn.RemoteAddr(), elapsed)
+		results["ws+json"] = elapsed
+	})
+
+	// WebSocket + MessagePack
+	http.HandleFunc("/websocket/bench/msgp", func(w http.ResponseWriter, r *http.Request) {
+		upgrader := websocket.Upgrader{CheckOrigin: func(r *http.Request) bool { return true }}
+		conn, err := upgrader.Upgrade(w, r, nil)
+		if err != nil {
+			log.Fatal(err)
+		}
+		// log.Printf("WebSocket client connected: %s\n", conn.RemoteAddr())
+		defer conn.Close()
+
+		// count to limit and measure time
+		t0 := time.Now().UnixMilli()
+		fmt.Printf("starting ws://msgp bench\n")
+		sequence := make(chan uint64, 10)
+		sequence <- 0
+		// receiver
+		go func() {
+			for {
+				mt, buf, err := conn.ReadMessage()
+				if err != nil || mt != websocket.BinaryMessage {
+					log.Fatalf("reading message: %v, %s", mt, err)
+				}
+				ct := new(Counter)
+				if err := msgpack.Unmarshal(buf, ct); err != nil {
+					log.Fatalf("unmarshal: %s", err)
+				}
+				if (ct.Seq % (countTo / 10)) == 0 {
+					fmt.Printf("%d .. ", ct.Seq)
+				}
+				if ct.Seq == countTo {
+					fmt.Printf("done!\n")
+					close(sequence)
+					return
+				} else {
+					sequence <- ct.Seq
+				}
+			}
+		}()
+		// sender
+		for seq := range sequence {
+			counter := &Counter{Seq: seq}
+			if addNoise > 0 {
+				counter.Noise = noise(addNoise)
+			}
+			m, err := msgpack.Marshal(counter)
+			if err != nil {
+				log.Fatalf("marshalling counter: %s", err)
+			}
+			if err := conn.WriteMessage(websocket.BinaryMessage, m); err != nil {
+				log.Fatalf("writing message: %s", err)
+			}
+		}
+		// measure elapsed time
+		elapsed := time.Now().UnixMilli() - t0
+		fmt.Printf("\033[32mws://\033[33mmsgp\033[0m benchmark with %s took \033[1m%d ms\033[0m\n", conn.RemoteAddr(), elapsed)
+		results["ws+msgp"] = elapsed
 	})
 
 	hserver := &http.Server{
-		Addr:      "127.0.0.1:4080",
+		Addr:      ":4080",
 		TLSConfig: tlsconf,
 	}
 	go func() {
-		log.Printf("websocket listening on https://127.0.0.1:4080/websocket")
+		log.Printf("websocket listening on https://:4080/websocket")
 		if err := hserver.ListenAndServeTLS("", ""); err != nil {
 			// if err := hserver.ListenAndServe(); err != nil {
 			log.Fatalf("oops: %s", err)
@@ -173,7 +249,7 @@ func main() {
 	// new HTTP/3 server
 	server := webtransport.Server{
 		H3: http3.Server{
-			Addr:      "127.0.0.1:4443",
+			Addr:      ":4443",
 			TLSConfig: tlsconf,
 			QUICConfig: &quic.Config{
 				MaxIdleTimeout:  2 * time.Second,
@@ -184,7 +260,7 @@ func main() {
 	}
 	defer server.Close()
 
-	// --> protobuf benchmark
+	// WebTransport + Protobuf
 	http.HandleFunc("/webtransport/bench/proto", func(w http.ResponseWriter, r *http.Request) {
 		conn, err := server.Upgrade(w, r)
 		if err != nil {
@@ -201,7 +277,7 @@ func main() {
 
 		// count to limit and measure time
 		t0 := time.Now().UnixMilli()
-		fmt.Printf("starting wt://proto bench at %d\n", t0)
+		fmt.Printf("starting wt://proto bench\n")
 		sequence := make(chan uint64, 10)
 		sequence <- 0
 		// receiver
@@ -212,7 +288,7 @@ func main() {
 				if protodelim.UnmarshalFrom(reader, ct); err != nil {
 					log.Fatalf("unmarshal: %s", err)
 				}
-				if (ct.Seq % 1000) == 0 {
+				if (ct.Seq % (countTo / 10)) == 0 {
 					fmt.Printf("%d .. ", ct.Seq)
 				}
 				if ct.Seq == countTo {
@@ -235,12 +311,12 @@ func main() {
 			}
 		}
 		// measure elapsed time
-		t1 := time.Now().UnixMilli()
-		fmt.Printf("\033[31mwt://proto\033[0m benchmark with %s took \033[1m%d ms\033[0m\n", conn.RemoteAddr(), t1-t0)
-
+		elapsed := time.Now().UnixMilli() - t0
+		fmt.Printf("\033[34mwt://\033[31mproto\033[0m benchmark with %s took \033[1m%d ms\033[0m\n", conn.RemoteAddr(), elapsed)
+		results["wt+proto"] = elapsed
 	})
 
-	// --> messagepack benchmark
+	// WebTransport + MessagePack
 	http.HandleFunc("/webtransport/bench/msgp", func(w http.ResponseWriter, r *http.Request) {
 		conn, err := server.Upgrade(w, r)
 		if err != nil {
@@ -259,7 +335,7 @@ func main() {
 
 		// count to limit and measure time
 		t0 := time.Now().UnixMilli()
-		fmt.Printf("starting wt://msgp bench at %d\n", t0)
+		fmt.Printf("starting wt://msgp bench\n")
 		sequence := make(chan uint64, 10)
 		sequence <- 0
 		// receiver
@@ -269,7 +345,7 @@ func main() {
 				if err := decoder.Decode(ct); err != nil {
 					log.Fatalf("unmarshal: %s", err)
 				}
-				if (ct.Seq % 1000) == 0 {
+				if (ct.Seq % (countTo / 10)) == 0 {
 					fmt.Printf("%d .. ", ct.Seq)
 				}
 				if ct.Seq == countTo {
@@ -292,13 +368,13 @@ func main() {
 			}
 		}
 		// measure elapsed time
-		t1 := time.Now().UnixMilli()
-		fmt.Printf("\033[33mwt://msgp\033[0m benchmark with %s took \033[1m%d ms\033[0m\n", conn.RemoteAddr(), t1-t0)
-
+		elapsed := time.Now().UnixMilli() - t0
+		fmt.Printf("\033[34mwt://\033[33mmsgp\033[0m benchmark with %s took \033[1m%d ms\033[0m\n", conn.RemoteAddr(), elapsed)
+		results["wt+msgp"] = elapsed
 	})
 
 	// start listening and print ephemeral certhash
-	log.Printf("webtransport listening on https://127.0.0.1:4443/webtransport")
+	log.Printf("webtransport listening on https://:4443/webtransport")
 	log.Printf("certhash: %s", certhash)
 	if err := server.ListenAndServe(); err != nil {
 		log.Fatalf("oops: %s", err)
@@ -306,30 +382,8 @@ func main() {
 
 }
 
-// create a new letter with a nested request in any payload
-func NewLetter() *Envelope {
-	hello, _ := anypb.New(&HelloRequest{Name: "Mark"})
-	return &Envelope{
-		Id:      globalSequence.Add(1),
-		Type:    MessageType_Request,
-		Payload: hello,
-	}
-}
-
-// example how to send letters on websocket conn
-func WsSendLetter(conn *websocket.Conn) {
-	letter := NewLetter()
-	m, _ := proto.Marshal(letter)
-	if err := conn.WriteMessage(websocket.BinaryMessage, m); err != nil {
-		log.Printf("ws to %s failed: %s", conn.RemoteAddr(), err)
-		conn.Close()
-		return
-	}
-	log.Printf("sent hello %d to %s", letter.Id, conn.RemoteAddr())
-}
-
 // get some random bytes
-func noise(length int) (b []byte) {
+func noise(length uint64) (b []byte) {
 	b = make([]byte, length)
 	if _, err := rand.Read(b); err != nil {
 		panic(fmt.Errorf("failed reading randomness: %w", err))
