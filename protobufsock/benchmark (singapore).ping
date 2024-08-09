@@ -1,0 +1,55 @@
+PING 2a01:4ff:2f0:270d::1 (2a01:4ff:2f0:270d::1) 56 data bytes
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=1 ttl=50 time=282 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=2 ttl=50 time=303 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=3 ttl=50 time=428 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=4 ttl=50 time=451 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=5 ttl=50 time=269 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=6 ttl=50 time=292 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=7 ttl=50 time=416 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=8 ttl=50 time=336 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=9 ttl=50 time=360 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=10 ttl=50 time=252 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=11 ttl=50 time=302 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=12 ttl=50 time=325 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=13 ttl=50 time=349 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=14 ttl=50 time=270 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=15 ttl=50 time=292 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=16 ttl=50 time=315 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=17 ttl=50 time=339 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=18 ttl=50 time=259 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=19 ttl=50 time=316 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=20 ttl=50 time=304 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=21 ttl=50 time=327 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=22 ttl=50 time=350 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=23 ttl=50 time=270 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=24 ttl=50 time=294 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=25 ttl=50 time=317 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=26 ttl=50 time=252 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=27 ttl=50 time=259 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=28 ttl=50 time=249 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=29 ttl=50 time=250 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=30 ttl=50 time=327 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=31 ttl=50 time=351 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=32 ttl=50 time=280 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=33 ttl=50 time=294 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=34 ttl=50 time=318 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=35 ttl=50 time=340 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=36 ttl=50 time=261 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=37 ttl=50 time=285 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=38 ttl=50 time=308 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=39 ttl=50 time=253 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=40 ttl=50 time=356 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=41 ttl=50 time=251 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=42 ttl=50 time=297 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=43 ttl=50 time=251 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=44 ttl=50 time=319 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=45 ttl=50 time=263 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=46 ttl=50 time=284 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=47 ttl=50 time=307 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=48 ttl=50 time=331 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=49 ttl=50 time=354 ms
+64 bytes from 2a01:4ff:2f0:270d::1: icmp_seq=50 ttl=50 time=274 ms
+
+--- 2a01:4ff:2f0:270d::1 ping statistics ---
+50 packets transmitted, 50 received, 0% packet loss, time 49058ms
+rtt min/avg/max/mdev = 249.138/306.613/451.252/45.695 ms
