@@ -33,6 +33,28 @@
     "@babel/helper-validator-identifier" "^7.24.7"
     to-fast-properties "^2.0.0"
 
+"@bufbuild/protobuf@2.0.0", "@bufbuild/protobuf@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@bufbuild/protobuf/-/protobuf-2.0.0.tgz#d4be93c778e0df2c0852cc286b1d04f576294bf9"
+  integrity sha512-sw2JhwJyvyL0zlhG61aDzOVryEfJg2PDZFSV7i7IdC7nAE41WuXCru3QWLGiP87At0BMzKOoKO/FqEGoKygGZQ==
+
+"@bufbuild/protoc-gen-es@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@bufbuild/protoc-gen-es/-/protoc-gen-es-2.0.0.tgz#da72f709614209d126ce99cdafd36dbb1cb21559"
+  integrity sha512-xXDrDFjSD97jGu9RMA8O4Myj66DdCLOFeYG7Z0mX1aCE9hayymfor+BKgKCQouUfty6CYv8709FPYpEtDurLFQ==
+  dependencies:
+    "@bufbuild/protobuf" "^2.0.0"
+    "@bufbuild/protoplugin" "2.0.0"
+
+"@bufbuild/protoplugin@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@bufbuild/protoplugin/-/protoplugin-2.0.0.tgz#cac1d9e2f0b08a48609fbda7c7542500ce5ef815"
+  integrity sha512-y77IarGNbJfr5YZHQ+biO0O9B8rXicKLLOFRJu9mKr9LYE5/CLIKqonIBfkc/lggCK2YOtinjZJEYb39HymIog==
+  dependencies:
+    "@bufbuild/protobuf" "2.0.0"
+    "@typescript/vfs" "^1.5.2"
+    typescript "5.4.5"
+
 "@esbuild/aix-ppc64@0.20.2":
   version "0.20.2"
   resolved "https://registry.yarnpkg.com/@esbuild/aix-ppc64/-/aix-ppc64-0.20.2.tgz#a70f4ac11c6a1dfc18b8bbb13284155d933b9537"
@@ -340,6 +362,13 @@
   dependencies:
     undici-types "~5.26.4"
 
+"@typescript/vfs@^1.5.2":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@typescript/vfs/-/vfs-1.6.0.tgz#9c90d8c43f7ac53cc77d5959e5c4c9b639f0959e"
+  integrity sha512-hvJUjNVeBMp77qPINuUvYXj4FyWeeMMKZkxEATEU3hqBAQ7qdTBCUFT7Sp0Zu0faeEtFf+ldXxMEDr/bk73ISg==
+  dependencies:
+    debug "^4.1.1"
+
 "@vitejs/plugin-vue@^5.0.4":
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-5.0.4.tgz#508d6a0f2440f86945835d903fcc0d95d1bb8a37"
@@ -558,6 +587,13 @@ de-indent@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
   integrity sha512-e/1zu3xH5MQryN2zdVaF0OrdNLUbvWxzMbi+iNA6Bky7l1RoP8a2fIbRocyHclXt/arDrrR6lL3TqFD9pMQTsg==
+
+debug@^4.1.1:
+  version "4.3.6"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.6.tgz#2ab2c38fbaffebf8aa95fdfe6d88438c7a13c52b"
+  integrity sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==
+  dependencies:
+    ms "2.1.2"
 
 deep-is@~0.1.3:
   version "0.1.4"
@@ -877,6 +913,11 @@ mkdirp@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
+
+ms@2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
+  integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
 muggle-string@^0.4.0:
   version "0.4.1"

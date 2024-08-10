@@ -7,7 +7,7 @@ export interface IEnvelope {
     id?: (number|Long|null);
 
     /** Envelope type */
-    type?: (MessageType|null);
+    type?: (Envelope.MessageType|null);
 
     /** Envelope payload */
     payload?: (google.protobuf.IAny|null);
@@ -26,7 +26,7 @@ export class Envelope implements IEnvelope {
     public id: (number|Long);
 
     /** Envelope type. */
-    public type: MessageType;
+    public type: Envelope.MessageType;
 
     /** Envelope payload. */
     public payload?: (google.protobuf.IAny|null);
@@ -109,12 +109,22 @@ export class Envelope implements IEnvelope {
     public static getTypeUrl(typeUrlPrefix?: string): string;
 }
 
-/** MessageType enum. */
-export enum MessageType {
-    UNKNOWN = 0,
-    Request = 1,
-    Reply = 2,
-    Note = 3
+export namespace Envelope {
+
+    /** MessageType enum. */
+    enum MessageType {
+        UNKNOWN = 0,
+        Req = 1,
+        Res = 2,
+        Ev = 3
+    }
+}
+
+/** Properties of a HelloRequest. */
+export interface IHelloRequest {
+
+    /** HelloRequest name */
+    name?: (string|null);
 }
 
 /** Represents a HelloRequest. */
@@ -207,6 +217,13 @@ export class HelloRequest implements IHelloRequest {
     public static getTypeUrl(typeUrlPrefix?: string): string;
 }
 
+/** Properties of a HelloReply. */
+export interface IHelloReply {
+
+    /** HelloReply message */
+    message?: (string|null);
+}
+
 /** Represents a HelloReply. */
 export class HelloReply implements IHelloReply {
 
@@ -295,6 +312,13 @@ export class HelloReply implements IHelloReply {
      * @returns The default type url
      */
     public static getTypeUrl(typeUrlPrefix?: string): string;
+}
+
+/** Properties of a HelloNote. */
+export interface IHelloNote {
+
+    /** HelloNote note */
+    note?: (string|null);
 }
 
 /** Represents a HelloNote. */
@@ -387,6 +411,16 @@ export class HelloNote implements IHelloNote {
     public static getTypeUrl(typeUrlPrefix?: string): string;
 }
 
+/** Properties of a Counter. */
+export interface ICounter {
+
+    /** Counter seq */
+    seq?: (number|Long|null);
+
+    /** Counter noise */
+    noise?: (Uint8Array|null);
+}
+
 /** Represents a Counter. */
 export class Counter implements ICounter {
 
@@ -474,6 +508,541 @@ export class Counter implements ICounter {
 
     /**
      * Gets the default type url for Counter
+     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+     * @returns The default type url
+     */
+    public static getTypeUrl(typeUrlPrefix?: string): string;
+}
+
+/** Properties of an OneOfEnvelope. */
+export interface IOneOfEnvelope {
+
+    /** OneOfEnvelope request */
+    request?: (IRequest|null);
+
+    /** OneOfEnvelope response */
+    response?: (IResponse|null);
+
+    /** OneOfEnvelope event */
+    event?: (IEvent|null);
+}
+
+/** Represents an OneOfEnvelope. */
+export class OneOfEnvelope implements IOneOfEnvelope {
+
+    /**
+     * Constructs a new OneOfEnvelope.
+     * @param [properties] Properties to set
+     */
+    constructor(properties?: IOneOfEnvelope);
+
+    /** OneOfEnvelope request. */
+    public request?: (IRequest|null);
+
+    /** OneOfEnvelope response. */
+    public response?: (IResponse|null);
+
+    /** OneOfEnvelope event. */
+    public event?: (IEvent|null);
+
+    /** OneOfEnvelope message. */
+    public message?: ("request"|"response"|"event");
+
+    /**
+     * Creates a new OneOfEnvelope instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns OneOfEnvelope instance
+     */
+    public static create(properties?: IOneOfEnvelope): OneOfEnvelope;
+
+    /**
+     * Encodes the specified OneOfEnvelope message. Does not implicitly {@link OneOfEnvelope.verify|verify} messages.
+     * @param message OneOfEnvelope message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(message: IOneOfEnvelope, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified OneOfEnvelope message, length delimited. Does not implicitly {@link OneOfEnvelope.verify|verify} messages.
+     * @param message OneOfEnvelope message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(message: IOneOfEnvelope, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Decodes an OneOfEnvelope message from the specified reader or buffer.
+     * @param reader Reader or buffer to decode from
+     * @param [length] Message length if known beforehand
+     * @returns OneOfEnvelope
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): OneOfEnvelope;
+
+    /**
+     * Decodes an OneOfEnvelope message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns OneOfEnvelope
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): OneOfEnvelope;
+
+    /**
+     * Verifies an OneOfEnvelope message.
+     * @param message Plain object to verify
+     * @returns `null` if valid, otherwise the reason why it is not
+     */
+    public static verify(message: { [k: string]: any }): (string|null);
+
+    /**
+     * Creates an OneOfEnvelope message from a plain object. Also converts values to their respective internal types.
+     * @param object Plain object
+     * @returns OneOfEnvelope
+     */
+    public static fromObject(object: { [k: string]: any }): OneOfEnvelope;
+
+    /**
+     * Creates a plain object from an OneOfEnvelope message. Also converts values to other types if specified.
+     * @param message OneOfEnvelope
+     * @param [options] Conversion options
+     * @returns Plain object
+     */
+    public static toObject(message: OneOfEnvelope, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+    /**
+     * Converts this OneOfEnvelope to JSON.
+     * @returns JSON object
+     */
+    public toJSON(): { [k: string]: any };
+
+    /**
+     * Gets the default type url for OneOfEnvelope
+     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+     * @returns The default type url
+     */
+    public static getTypeUrl(typeUrlPrefix?: string): string;
+}
+
+/** Properties of an AnyEnvelope. */
+export interface IAnyEnvelope {
+
+    /** AnyEnvelope type */
+    type?: (AnyEnvelope.MessageType|null);
+
+    /** AnyEnvelope payload */
+    payload?: (google.protobuf.IAny|null);
+}
+
+/** Represents an AnyEnvelope. */
+export class AnyEnvelope implements IAnyEnvelope {
+
+    /**
+     * Constructs a new AnyEnvelope.
+     * @param [properties] Properties to set
+     */
+    constructor(properties?: IAnyEnvelope);
+
+    /** AnyEnvelope type. */
+    public type: AnyEnvelope.MessageType;
+
+    /** AnyEnvelope payload. */
+    public payload?: (google.protobuf.IAny|null);
+
+    /**
+     * Creates a new AnyEnvelope instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns AnyEnvelope instance
+     */
+    public static create(properties?: IAnyEnvelope): AnyEnvelope;
+
+    /**
+     * Encodes the specified AnyEnvelope message. Does not implicitly {@link AnyEnvelope.verify|verify} messages.
+     * @param message AnyEnvelope message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(message: IAnyEnvelope, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified AnyEnvelope message, length delimited. Does not implicitly {@link AnyEnvelope.verify|verify} messages.
+     * @param message AnyEnvelope message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(message: IAnyEnvelope, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Decodes an AnyEnvelope message from the specified reader or buffer.
+     * @param reader Reader or buffer to decode from
+     * @param [length] Message length if known beforehand
+     * @returns AnyEnvelope
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): AnyEnvelope;
+
+    /**
+     * Decodes an AnyEnvelope message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns AnyEnvelope
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): AnyEnvelope;
+
+    /**
+     * Verifies an AnyEnvelope message.
+     * @param message Plain object to verify
+     * @returns `null` if valid, otherwise the reason why it is not
+     */
+    public static verify(message: { [k: string]: any }): (string|null);
+
+    /**
+     * Creates an AnyEnvelope message from a plain object. Also converts values to their respective internal types.
+     * @param object Plain object
+     * @returns AnyEnvelope
+     */
+    public static fromObject(object: { [k: string]: any }): AnyEnvelope;
+
+    /**
+     * Creates a plain object from an AnyEnvelope message. Also converts values to other types if specified.
+     * @param message AnyEnvelope
+     * @param [options] Conversion options
+     * @returns Plain object
+     */
+    public static toObject(message: AnyEnvelope, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+    /**
+     * Converts this AnyEnvelope to JSON.
+     * @returns JSON object
+     */
+    public toJSON(): { [k: string]: any };
+
+    /**
+     * Gets the default type url for AnyEnvelope
+     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+     * @returns The default type url
+     */
+    public static getTypeUrl(typeUrlPrefix?: string): string;
+}
+
+export namespace AnyEnvelope {
+
+    /** MessageType enum. */
+    enum MessageType {
+        UNKNOWN = 0,
+        Req = 1,
+        Res = 2,
+        Ev = 3
+    }
+}
+
+/** Properties of a Request. */
+export interface IRequest {
+
+    /** Request seq */
+    seq?: (number|Long|null);
+
+    /** Request request */
+    request?: (google.protobuf.IAny|null);
+}
+
+/** Represents a Request. */
+export class Request implements IRequest {
+
+    /**
+     * Constructs a new Request.
+     * @param [properties] Properties to set
+     */
+    constructor(properties?: IRequest);
+
+    /** Request seq. */
+    public seq: (number|Long);
+
+    /** Request request. */
+    public request?: (google.protobuf.IAny|null);
+
+    /**
+     * Creates a new Request instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns Request instance
+     */
+    public static create(properties?: IRequest): Request;
+
+    /**
+     * Encodes the specified Request message. Does not implicitly {@link Request.verify|verify} messages.
+     * @param message Request message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(message: IRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified Request message, length delimited. Does not implicitly {@link Request.verify|verify} messages.
+     * @param message Request message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(message: IRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Decodes a Request message from the specified reader or buffer.
+     * @param reader Reader or buffer to decode from
+     * @param [length] Message length if known beforehand
+     * @returns Request
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): Request;
+
+    /**
+     * Decodes a Request message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns Request
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): Request;
+
+    /**
+     * Verifies a Request message.
+     * @param message Plain object to verify
+     * @returns `null` if valid, otherwise the reason why it is not
+     */
+    public static verify(message: { [k: string]: any }): (string|null);
+
+    /**
+     * Creates a Request message from a plain object. Also converts values to their respective internal types.
+     * @param object Plain object
+     * @returns Request
+     */
+    public static fromObject(object: { [k: string]: any }): Request;
+
+    /**
+     * Creates a plain object from a Request message. Also converts values to other types if specified.
+     * @param message Request
+     * @param [options] Conversion options
+     * @returns Plain object
+     */
+    public static toObject(message: Request, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+    /**
+     * Converts this Request to JSON.
+     * @returns JSON object
+     */
+    public toJSON(): { [k: string]: any };
+
+    /**
+     * Gets the default type url for Request
+     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+     * @returns The default type url
+     */
+    public static getTypeUrl(typeUrlPrefix?: string): string;
+}
+
+/** Properties of a Response. */
+export interface IResponse {
+
+    /** Response seq */
+    seq?: (number|Long|null);
+
+    /** Response error */
+    error?: (string|null);
+
+    /** Response response */
+    response?: (google.protobuf.IAny|null);
+}
+
+/** Represents a Response. */
+export class Response implements IResponse {
+
+    /**
+     * Constructs a new Response.
+     * @param [properties] Properties to set
+     */
+    constructor(properties?: IResponse);
+
+    /** Response seq. */
+    public seq: (number|Long);
+
+    /** Response error. */
+    public error: string;
+
+    /** Response response. */
+    public response?: (google.protobuf.IAny|null);
+
+    /**
+     * Creates a new Response instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns Response instance
+     */
+    public static create(properties?: IResponse): Response;
+
+    /**
+     * Encodes the specified Response message. Does not implicitly {@link Response.verify|verify} messages.
+     * @param message Response message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(message: IResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified Response message, length delimited. Does not implicitly {@link Response.verify|verify} messages.
+     * @param message Response message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(message: IResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Decodes a Response message from the specified reader or buffer.
+     * @param reader Reader or buffer to decode from
+     * @param [length] Message length if known beforehand
+     * @returns Response
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): Response;
+
+    /**
+     * Decodes a Response message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns Response
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): Response;
+
+    /**
+     * Verifies a Response message.
+     * @param message Plain object to verify
+     * @returns `null` if valid, otherwise the reason why it is not
+     */
+    public static verify(message: { [k: string]: any }): (string|null);
+
+    /**
+     * Creates a Response message from a plain object. Also converts values to their respective internal types.
+     * @param object Plain object
+     * @returns Response
+     */
+    public static fromObject(object: { [k: string]: any }): Response;
+
+    /**
+     * Creates a plain object from a Response message. Also converts values to other types if specified.
+     * @param message Response
+     * @param [options] Conversion options
+     * @returns Plain object
+     */
+    public static toObject(message: Response, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+    /**
+     * Converts this Response to JSON.
+     * @returns JSON object
+     */
+    public toJSON(): { [k: string]: any };
+
+    /**
+     * Gets the default type url for Response
+     * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+     * @returns The default type url
+     */
+    public static getTypeUrl(typeUrlPrefix?: string): string;
+}
+
+/** Properties of an Event. */
+export interface IEvent {
+
+    /** Event event */
+    event?: (google.protobuf.IAny|null);
+}
+
+/** Represents an Event. */
+export class Event implements IEvent {
+
+    /**
+     * Constructs a new Event.
+     * @param [properties] Properties to set
+     */
+    constructor(properties?: IEvent);
+
+    /** Event event. */
+    public event?: (google.protobuf.IAny|null);
+
+    /**
+     * Creates a new Event instance using the specified properties.
+     * @param [properties] Properties to set
+     * @returns Event instance
+     */
+    public static create(properties?: IEvent): Event;
+
+    /**
+     * Encodes the specified Event message. Does not implicitly {@link Event.verify|verify} messages.
+     * @param message Event message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encode(message: IEvent, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Encodes the specified Event message, length delimited. Does not implicitly {@link Event.verify|verify} messages.
+     * @param message Event message or plain object to encode
+     * @param [writer] Writer to encode to
+     * @returns Writer
+     */
+    public static encodeDelimited(message: IEvent, writer?: $protobuf.Writer): $protobuf.Writer;
+
+    /**
+     * Decodes an Event message from the specified reader or buffer.
+     * @param reader Reader or buffer to decode from
+     * @param [length] Message length if known beforehand
+     * @returns Event
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): Event;
+
+    /**
+     * Decodes an Event message from the specified reader or buffer, length delimited.
+     * @param reader Reader or buffer to decode from
+     * @returns Event
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): Event;
+
+    /**
+     * Verifies an Event message.
+     * @param message Plain object to verify
+     * @returns `null` if valid, otherwise the reason why it is not
+     */
+    public static verify(message: { [k: string]: any }): (string|null);
+
+    /**
+     * Creates an Event message from a plain object. Also converts values to their respective internal types.
+     * @param object Plain object
+     * @returns Event
+     */
+    public static fromObject(object: { [k: string]: any }): Event;
+
+    /**
+     * Creates a plain object from an Event message. Also converts values to other types if specified.
+     * @param message Event
+     * @param [options] Conversion options
+     * @returns Plain object
+     */
+    public static toObject(message: Event, options?: $protobuf.IConversionOptions): { [k: string]: any };
+
+    /**
+     * Converts this Event to JSON.
+     * @returns JSON object
+     */
+    public toJSON(): { [k: string]: any };
+
+    /**
+     * Gets the default type url for Event
      * @param [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
      * @returns The default type url
      */

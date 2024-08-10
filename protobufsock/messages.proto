@@ -8,18 +8,18 @@ option go_package = "./main";
 
 import "google/protobuf/any.proto";
 
-// Generic message on the wire.
 message Envelope {
-  uint64 id = 1;
-  MessageType type = 2;
-  google.protobuf.Any payload = 3;
-}
 
-enum MessageType {
-  UNKNOWN = 0;
-  Request = 1;
-  Reply = 2;
-  Note = 3;
+  // sequence number of the message
+  uint64 id = 1;
+
+  // message type for handler routing
+  enum MessageType { UNKNOWN = 0; Req = 1; Res = 2; Ev = 3; }
+  MessageType type = 2;
+
+  // embedded payload (switch on @type)
+  google.protobuf.Any payload = 3;
+
 }
 
 // The request message containing the user's name.
@@ -41,4 +41,40 @@ message HelloNote {
 message Counter {
   uint64 seq = 1;
   bytes noise = 2;
+}
+
+// --------------------------------
+
+message OneOfEnvelope {
+  oneof message {
+    Request request = 1;
+    Response response = 2;
+    Event event = 3;
+  }
+}
+
+message AnyEnvelope {
+  // message type for handler routing
+  enum MessageType { UNKNOWN = 0; Req = 1; Res = 2; Ev = 3; }
+  MessageType type = 2;
+  // embedded payload
+  google.protobuf.Any payload = 3;
+}
+
+message Request {
+  uint64 seq = 1;
+  // method is determined by payload type
+  // any arguments are within
+  google.protobuf.Any request = 2;
+  // TODO: timeout etc.
+}
+
+message Response {
+  uint64 seq = 1;
+  string error = 2; // nil => ok
+  google.protobuf.Any response = 3;
+}
+
+message Event {
+  google.protobuf.Any event = 1;
 }

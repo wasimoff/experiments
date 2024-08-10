@@ -12,6 +12,8 @@
     "proto": "pbjs -t static-module -w es6 -o src/messages.js ../messages.proto && pbts -o src/messages.d.ts src/messages.js"
   },
   "dependencies": {
+    "@bufbuild/protobuf": "^2.0.0",
+    "@bufbuild/protoc-gen-es": "^2.0.0",
     "@msgpack/msgpack": "^3.0.0-beta2",
     "it-length-prefixed": "^9.0.5",
     "it-reader": "^6.0.4",

@@ -1,8 +1,7 @@
 <script setup lang="ts">
 
 import { ref } from "vue";
-import { reader as itreader } from "it-reader";
-import { decode as dechunker, encode as chunker } from "it-length-prefixed";
+import { decode as dechunker } from "it-length-prefixed";
 
 // run `yarn proto` to recreate from .proto file
 import { Writer as pbWriter } from "protobufjs";
@@ -14,7 +13,7 @@ const wsurl = "wss://localhost:4080"
 const wturl = "https://localhost:4443"
 const certhash = "8a437f3ee80e686fab1bb7d694a22d904be893ce7e7be2f9bf8ee5bfe1bdb25c";
 const serverCertificateHashes = [{ algorithm: "sha-256",
-  value: Uint8Array.from(certhash.match(/../g)!.map(b => parseInt(b, 16))),
+value: Uint8Array.from(certhash.match(/../g)!.map(b => parseInt(b, 16))),
 }];
 
 

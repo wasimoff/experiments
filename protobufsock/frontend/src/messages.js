@@ -14,7 +14,7 @@ export const Envelope = $root.Envelope = (() => {
      * @exports IEnvelope
      * @interface IEnvelope
      * @property {number|Long|null} [id] Envelope id
-     * @property {MessageType|null} [type] Envelope type
+     * @property {Envelope.MessageType|null} [type] Envelope type
      * @property {google.protobuf.IAny|null} [payload] Envelope payload
      */
 
@@ -43,7 +43,7 @@ export const Envelope = $root.Envelope = (() => {
 
     /**
      * Envelope type.
-     * @member {MessageType} type
+     * @member {Envelope.MessageType} type
      * @memberof Envelope
      * @instance
      */
@@ -221,15 +221,15 @@ export const Envelope = $root.Envelope = (() => {
         case 0:
             message.type = 0;
             break;
-        case "Request":
+        case "Req":
         case 1:
             message.type = 1;
             break;
-        case "Reply":
+        case "Res":
         case 2:
             message.type = 2;
             break;
-        case "Note":
+        case "Ev":
         case 3:
             message.type = 3;
             break;
@@ -270,7 +270,7 @@ export const Envelope = $root.Envelope = (() => {
             else
                 object.id = options.longs === String ? $util.Long.prototype.toString.call(message.id) : options.longs === Number ? new $util.LongBits(message.id.low >>> 0, message.id.high >>> 0).toNumber(true) : message.id;
         if (message.type != null && message.hasOwnProperty("type"))
-            object.type = options.enums === String ? $root.MessageType[message.type] === undefined ? message.type : $root.MessageType[message.type] : message.type;
+            object.type = options.enums === String ? $root.Envelope.MessageType[message.type] === undefined ? message.type : $root.Envelope.MessageType[message.type] : message.type;
         if (message.payload != null && message.hasOwnProperty("payload"))
             object.payload = $root.google.protobuf.Any.toObject(message.payload, options);
         return object;
@@ -302,25 +302,25 @@ export const Envelope = $root.Envelope = (() => {
         return typeUrlPrefix + "/Envelope";
     };
 
-    return Envelope;
-})();
+    /**
+     * MessageType enum.
+     * @name Envelope.MessageType
+     * @enum {number}
+     * @property {number} UNKNOWN=0 UNKNOWN value
+     * @property {number} Req=1 Req value
+     * @property {number} Res=2 Res value
+     * @property {number} Ev=3 Ev value
+     */
+    Envelope.MessageType = (function() {
+        const valuesById = {}, values = Object.create(valuesById);
+        values[valuesById[0] = "UNKNOWN"] = 0;
+        values[valuesById[1] = "Req"] = 1;
+        values[valuesById[2] = "Res"] = 2;
+        values[valuesById[3] = "Ev"] = 3;
+        return values;
+    })();
 
-/**
- * MessageType enum.
- * @exports MessageType
- * @enum {number}
- * @property {number} UNKNOWN=0 UNKNOWN value
- * @property {number} Request=1 Request value
- * @property {number} Reply=2 Reply value
- * @property {number} Note=3 Note value
- */
-export const MessageType = $root.MessageType = (() => {
-    const valuesById = {}, values = Object.create(valuesById);
-    values[valuesById[0] = "UNKNOWN"] = 0;
-    values[valuesById[1] = "Request"] = 1;
-    values[valuesById[2] = "Reply"] = 2;
-    values[valuesById[3] = "Note"] = 3;
-    return values;
+    return Envelope;
 })();
 
 export const HelloRequest = $root.HelloRequest = (() => {
@@ -1180,6 +1180,1305 @@ export const Counter = $root.Counter = (() => {
     };
 
     return Counter;
+})();
+
+export const OneOfEnvelope = $root.OneOfEnvelope = (() => {
+
+    /**
+     * Properties of an OneOfEnvelope.
+     * @exports IOneOfEnvelope
+     * @interface IOneOfEnvelope
+     * @property {IRequest|null} [request] OneOfEnvelope request
+     * @property {IResponse|null} [response] OneOfEnvelope response
+     * @property {IEvent|null} [event] OneOfEnvelope event
+     */
+
+    /**
+     * Constructs a new OneOfEnvelope.
+     * @exports OneOfEnvelope
+     * @classdesc Represents an OneOfEnvelope.
+     * @implements IOneOfEnvelope
+     * @constructor
+     * @param {IOneOfEnvelope=} [properties] Properties to set
+     */
+    function OneOfEnvelope(properties) {
+        if (properties)
+            for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                if (properties[keys[i]] != null)
+                    this[keys[i]] = properties[keys[i]];
+    }
+
+    /**
+     * OneOfEnvelope request.
+     * @member {IRequest|null|undefined} request
+     * @memberof OneOfEnvelope
+     * @instance
+     */
+    OneOfEnvelope.prototype.request = null;
+
+    /**
+     * OneOfEnvelope response.
+     * @member {IResponse|null|undefined} response
+     * @memberof OneOfEnvelope
+     * @instance
+     */
+    OneOfEnvelope.prototype.response = null;
+
+    /**
+     * OneOfEnvelope event.
+     * @member {IEvent|null|undefined} event
+     * @memberof OneOfEnvelope
+     * @instance
+     */
+    OneOfEnvelope.prototype.event = null;
+
+    // OneOf field names bound to virtual getters and setters
+    let $oneOfFields;
+
+    /**
+     * OneOfEnvelope message.
+     * @member {"request"|"response"|"event"|undefined} message
+     * @memberof OneOfEnvelope
+     * @instance
+     */
+    Object.defineProperty(OneOfEnvelope.prototype, "message", {
+        get: $util.oneOfGetter($oneOfFields = ["request", "response", "event"]),
+        set: $util.oneOfSetter($oneOfFields)
+    });
+
+    /**
+     * Creates a new OneOfEnvelope instance using the specified properties.
+     * @function create
+     * @memberof OneOfEnvelope
+     * @static
+     * @param {IOneOfEnvelope=} [properties] Properties to set
+     * @returns {OneOfEnvelope} OneOfEnvelope instance
+     */
+    OneOfEnvelope.create = function create(properties) {
+        return new OneOfEnvelope(properties);
+    };
+
+    /**
+     * Encodes the specified OneOfEnvelope message. Does not implicitly {@link OneOfEnvelope.verify|verify} messages.
+     * @function encode
+     * @memberof OneOfEnvelope
+     * @static
+     * @param {IOneOfEnvelope} message OneOfEnvelope message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    OneOfEnvelope.encode = function encode(message, writer) {
+        if (!writer)
+            writer = $Writer.create();
+        if (message.request != null && Object.hasOwnProperty.call(message, "request"))
+            $root.Request.encode(message.request, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+        if (message.response != null && Object.hasOwnProperty.call(message, "response"))
+            $root.Response.encode(message.response, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+        if (message.event != null && Object.hasOwnProperty.call(message, "event"))
+            $root.Event.encode(message.event, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+        return writer;
+    };
+
+    /**
+     * Encodes the specified OneOfEnvelope message, length delimited. Does not implicitly {@link OneOfEnvelope.verify|verify} messages.
+     * @function encodeDelimited
+     * @memberof OneOfEnvelope
+     * @static
+     * @param {IOneOfEnvelope} message OneOfEnvelope message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    OneOfEnvelope.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+    };
+
+    /**
+     * Decodes an OneOfEnvelope message from the specified reader or buffer.
+     * @function decode
+     * @memberof OneOfEnvelope
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @param {number} [length] Message length if known beforehand
+     * @returns {OneOfEnvelope} OneOfEnvelope
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    OneOfEnvelope.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader))
+            reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length, message = new $root.OneOfEnvelope();
+        while (reader.pos < end) {
+            let tag = reader.uint32();
+            switch (tag >>> 3) {
+            case 1: {
+                    message.request = $root.Request.decode(reader, reader.uint32());
+                    break;
+                }
+            case 2: {
+                    message.response = $root.Response.decode(reader, reader.uint32());
+                    break;
+                }
+            case 3: {
+                    message.event = $root.Event.decode(reader, reader.uint32());
+                    break;
+                }
+            default:
+                reader.skipType(tag & 7);
+                break;
+            }
+        }
+        return message;
+    };
+
+    /**
+     * Decodes an OneOfEnvelope message from the specified reader or buffer, length delimited.
+     * @function decodeDelimited
+     * @memberof OneOfEnvelope
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @returns {OneOfEnvelope} OneOfEnvelope
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    OneOfEnvelope.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader))
+            reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+    };
+
+    /**
+     * Verifies an OneOfEnvelope message.
+     * @function verify
+     * @memberof OneOfEnvelope
+     * @static
+     * @param {Object.<string,*>} message Plain object to verify
+     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+     */
+    OneOfEnvelope.verify = function verify(message) {
+        if (typeof message !== "object" || message === null)
+            return "object expected";
+        let properties = {};
+        if (message.request != null && message.hasOwnProperty("request")) {
+            properties.message = 1;
+            {
+                let error = $root.Request.verify(message.request);
+                if (error)
+                    return "request." + error;
+            }
+        }
+        if (message.response != null && message.hasOwnProperty("response")) {
+            if (properties.message === 1)
+                return "message: multiple values";
+            properties.message = 1;
+            {
+                let error = $root.Response.verify(message.response);
+                if (error)
+                    return "response." + error;
+            }
+        }
+        if (message.event != null && message.hasOwnProperty("event")) {
+            if (properties.message === 1)
+                return "message: multiple values";
+            properties.message = 1;
+            {
+                let error = $root.Event.verify(message.event);
+                if (error)
+                    return "event." + error;
+            }
+        }
+        return null;
+    };
+
+    /**
+     * Creates an OneOfEnvelope message from a plain object. Also converts values to their respective internal types.
+     * @function fromObject
+     * @memberof OneOfEnvelope
+     * @static
+     * @param {Object.<string,*>} object Plain object
+     * @returns {OneOfEnvelope} OneOfEnvelope
+     */
+    OneOfEnvelope.fromObject = function fromObject(object) {
+        if (object instanceof $root.OneOfEnvelope)
+            return object;
+        let message = new $root.OneOfEnvelope();
+        if (object.request != null) {
+            if (typeof object.request !== "object")
+                throw TypeError(".OneOfEnvelope.request: object expected");
+            message.request = $root.Request.fromObject(object.request);
+        }
+        if (object.response != null) {
+            if (typeof object.response !== "object")
+                throw TypeError(".OneOfEnvelope.response: object expected");
+            message.response = $root.Response.fromObject(object.response);
+        }
+        if (object.event != null) {
+            if (typeof object.event !== "object")
+                throw TypeError(".OneOfEnvelope.event: object expected");
+            message.event = $root.Event.fromObject(object.event);
+        }
+        return message;
+    };
+
+    /**
+     * Creates a plain object from an OneOfEnvelope message. Also converts values to other types if specified.
+     * @function toObject
+     * @memberof OneOfEnvelope
+     * @static
+     * @param {OneOfEnvelope} message OneOfEnvelope
+     * @param {$protobuf.IConversionOptions} [options] Conversion options
+     * @returns {Object.<string,*>} Plain object
+     */
+    OneOfEnvelope.toObject = function toObject(message, options) {
+        if (!options)
+            options = {};
+        let object = {};
+        if (message.request != null && message.hasOwnProperty("request")) {
+            object.request = $root.Request.toObject(message.request, options);
+            if (options.oneofs)
+                object.message = "request";
+        }
+        if (message.response != null && message.hasOwnProperty("response")) {
+            object.response = $root.Response.toObject(message.response, options);
+            if (options.oneofs)
+                object.message = "response";
+        }
+        if (message.event != null && message.hasOwnProperty("event")) {
+            object.event = $root.Event.toObject(message.event, options);
+            if (options.oneofs)
+                object.message = "event";
+        }
+        return object;
+    };
+
+    /**
+     * Converts this OneOfEnvelope to JSON.
+     * @function toJSON
+     * @memberof OneOfEnvelope
+     * @instance
+     * @returns {Object.<string,*>} JSON object
+     */
+    OneOfEnvelope.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+    };
+
+    /**
+     * Gets the default type url for OneOfEnvelope
+     * @function getTypeUrl
+     * @memberof OneOfEnvelope
+     * @static
+     * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+     * @returns {string} The default type url
+     */
+    OneOfEnvelope.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+        if (typeUrlPrefix === undefined) {
+            typeUrlPrefix = "type.googleapis.com";
+        }
+        return typeUrlPrefix + "/OneOfEnvelope";
+    };
+
+    return OneOfEnvelope;
+})();
+
+export const AnyEnvelope = $root.AnyEnvelope = (() => {
+
+    /**
+     * Properties of an AnyEnvelope.
+     * @exports IAnyEnvelope
+     * @interface IAnyEnvelope
+     * @property {AnyEnvelope.MessageType|null} [type] AnyEnvelope type
+     * @property {google.protobuf.IAny|null} [payload] AnyEnvelope payload
+     */
+
+    /**
+     * Constructs a new AnyEnvelope.
+     * @exports AnyEnvelope
+     * @classdesc Represents an AnyEnvelope.
+     * @implements IAnyEnvelope
+     * @constructor
+     * @param {IAnyEnvelope=} [properties] Properties to set
+     */
+    function AnyEnvelope(properties) {
+        if (properties)
+            for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                if (properties[keys[i]] != null)
+                    this[keys[i]] = properties[keys[i]];
+    }
+
+    /**
+     * AnyEnvelope type.
+     * @member {AnyEnvelope.MessageType} type
+     * @memberof AnyEnvelope
+     * @instance
+     */
+    AnyEnvelope.prototype.type = 0;
+
+    /**
+     * AnyEnvelope payload.
+     * @member {google.protobuf.IAny|null|undefined} payload
+     * @memberof AnyEnvelope
+     * @instance
+     */
+    AnyEnvelope.prototype.payload = null;
+
+    /**
+     * Creates a new AnyEnvelope instance using the specified properties.
+     * @function create
+     * @memberof AnyEnvelope
+     * @static
+     * @param {IAnyEnvelope=} [properties] Properties to set
+     * @returns {AnyEnvelope} AnyEnvelope instance
+     */
+    AnyEnvelope.create = function create(properties) {
+        return new AnyEnvelope(properties);
+    };
+
+    /**
+     * Encodes the specified AnyEnvelope message. Does not implicitly {@link AnyEnvelope.verify|verify} messages.
+     * @function encode
+     * @memberof AnyEnvelope
+     * @static
+     * @param {IAnyEnvelope} message AnyEnvelope message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    AnyEnvelope.encode = function encode(message, writer) {
+        if (!writer)
+            writer = $Writer.create();
+        if (message.type != null && Object.hasOwnProperty.call(message, "type"))
+            writer.uint32(/* id 2, wireType 0 =*/16).int32(message.type);
+        if (message.payload != null && Object.hasOwnProperty.call(message, "payload"))
+            $root.google.protobuf.Any.encode(message.payload, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+        return writer;
+    };
+
+    /**
+     * Encodes the specified AnyEnvelope message, length delimited. Does not implicitly {@link AnyEnvelope.verify|verify} messages.
+     * @function encodeDelimited
+     * @memberof AnyEnvelope
+     * @static
+     * @param {IAnyEnvelope} message AnyEnvelope message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    AnyEnvelope.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+    };
+
+    /**
+     * Decodes an AnyEnvelope message from the specified reader or buffer.
+     * @function decode
+     * @memberof AnyEnvelope
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @param {number} [length] Message length if known beforehand
+     * @returns {AnyEnvelope} AnyEnvelope
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    AnyEnvelope.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader))
+            reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length, message = new $root.AnyEnvelope();
+        while (reader.pos < end) {
+            let tag = reader.uint32();
+            switch (tag >>> 3) {
+            case 2: {
+                    message.type = reader.int32();
+                    break;
+                }
+            case 3: {
+                    message.payload = $root.google.protobuf.Any.decode(reader, reader.uint32());
+                    break;
+                }
+            default:
+                reader.skipType(tag & 7);
+                break;
+            }
+        }
+        return message;
+    };
+
+    /**
+     * Decodes an AnyEnvelope message from the specified reader or buffer, length delimited.
+     * @function decodeDelimited
+     * @memberof AnyEnvelope
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @returns {AnyEnvelope} AnyEnvelope
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    AnyEnvelope.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader))
+            reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+    };
+
+    /**
+     * Verifies an AnyEnvelope message.
+     * @function verify
+     * @memberof AnyEnvelope
+     * @static
+     * @param {Object.<string,*>} message Plain object to verify
+     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+     */
+    AnyEnvelope.verify = function verify(message) {
+        if (typeof message !== "object" || message === null)
+            return "object expected";
+        if (message.type != null && message.hasOwnProperty("type"))
+            switch (message.type) {
+            default:
+                return "type: enum value expected";
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+                break;
+            }
+        if (message.payload != null && message.hasOwnProperty("payload")) {
+            let error = $root.google.protobuf.Any.verify(message.payload);
+            if (error)
+                return "payload." + error;
+        }
+        return null;
+    };
+
+    /**
+     * Creates an AnyEnvelope message from a plain object. Also converts values to their respective internal types.
+     * @function fromObject
+     * @memberof AnyEnvelope
+     * @static
+     * @param {Object.<string,*>} object Plain object
+     * @returns {AnyEnvelope} AnyEnvelope
+     */
+    AnyEnvelope.fromObject = function fromObject(object) {
+        if (object instanceof $root.AnyEnvelope)
+            return object;
+        let message = new $root.AnyEnvelope();
+        switch (object.type) {
+        default:
+            if (typeof object.type === "number") {
+                message.type = object.type;
+                break;
+            }
+            break;
+        case "UNKNOWN":
+        case 0:
+            message.type = 0;
+            break;
+        case "Req":
+        case 1:
+            message.type = 1;
+            break;
+        case "Res":
+        case 2:
+            message.type = 2;
+            break;
+        case "Ev":
+        case 3:
+            message.type = 3;
+            break;
+        }
+        if (object.payload != null) {
+            if (typeof object.payload !== "object")
+                throw TypeError(".AnyEnvelope.payload: object expected");
+            message.payload = $root.google.protobuf.Any.fromObject(object.payload);
+        }
+        return message;
+    };
+
+    /**
+     * Creates a plain object from an AnyEnvelope message. Also converts values to other types if specified.
+     * @function toObject
+     * @memberof AnyEnvelope
+     * @static
+     * @param {AnyEnvelope} message AnyEnvelope
+     * @param {$protobuf.IConversionOptions} [options] Conversion options
+     * @returns {Object.<string,*>} Plain object
+     */
+    AnyEnvelope.toObject = function toObject(message, options) {
+        if (!options)
+            options = {};
+        let object = {};
+        if (options.defaults) {
+            object.type = options.enums === String ? "UNKNOWN" : 0;
+            object.payload = null;
+        }
+        if (message.type != null && message.hasOwnProperty("type"))
+            object.type = options.enums === String ? $root.AnyEnvelope.MessageType[message.type] === undefined ? message.type : $root.AnyEnvelope.MessageType[message.type] : message.type;
+        if (message.payload != null && message.hasOwnProperty("payload"))
+            object.payload = $root.google.protobuf.Any.toObject(message.payload, options);
+        return object;
+    };
+
+    /**
+     * Converts this AnyEnvelope to JSON.
+     * @function toJSON
+     * @memberof AnyEnvelope
+     * @instance
+     * @returns {Object.<string,*>} JSON object
+     */
+    AnyEnvelope.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+    };
+
+    /**
+     * Gets the default type url for AnyEnvelope
+     * @function getTypeUrl
+     * @memberof AnyEnvelope
+     * @static
+     * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+     * @returns {string} The default type url
+     */
+    AnyEnvelope.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+        if (typeUrlPrefix === undefined) {
+            typeUrlPrefix = "type.googleapis.com";
+        }
+        return typeUrlPrefix + "/AnyEnvelope";
+    };
+
+    /**
+     * MessageType enum.
+     * @name AnyEnvelope.MessageType
+     * @enum {number}
+     * @property {number} UNKNOWN=0 UNKNOWN value
+     * @property {number} Req=1 Req value
+     * @property {number} Res=2 Res value
+     * @property {number} Ev=3 Ev value
+     */
+    AnyEnvelope.MessageType = (function() {
+        const valuesById = {}, values = Object.create(valuesById);
+        values[valuesById[0] = "UNKNOWN"] = 0;
+        values[valuesById[1] = "Req"] = 1;
+        values[valuesById[2] = "Res"] = 2;
+        values[valuesById[3] = "Ev"] = 3;
+        return values;
+    })();
+
+    return AnyEnvelope;
+})();
+
+export const Request = $root.Request = (() => {
+
+    /**
+     * Properties of a Request.
+     * @exports IRequest
+     * @interface IRequest
+     * @property {number|Long|null} [seq] Request seq
+     * @property {google.protobuf.IAny|null} [request] Request request
+     */
+
+    /**
+     * Constructs a new Request.
+     * @exports Request
+     * @classdesc Represents a Request.
+     * @implements IRequest
+     * @constructor
+     * @param {IRequest=} [properties] Properties to set
+     */
+    function Request(properties) {
+        if (properties)
+            for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                if (properties[keys[i]] != null)
+                    this[keys[i]] = properties[keys[i]];
+    }
+
+    /**
+     * Request seq.
+     * @member {number|Long} seq
+     * @memberof Request
+     * @instance
+     */
+    Request.prototype.seq = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+
+    /**
+     * Request request.
+     * @member {google.protobuf.IAny|null|undefined} request
+     * @memberof Request
+     * @instance
+     */
+    Request.prototype.request = null;
+
+    /**
+     * Creates a new Request instance using the specified properties.
+     * @function create
+     * @memberof Request
+     * @static
+     * @param {IRequest=} [properties] Properties to set
+     * @returns {Request} Request instance
+     */
+    Request.create = function create(properties) {
+        return new Request(properties);
+    };
+
+    /**
+     * Encodes the specified Request message. Does not implicitly {@link Request.verify|verify} messages.
+     * @function encode
+     * @memberof Request
+     * @static
+     * @param {IRequest} message Request message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    Request.encode = function encode(message, writer) {
+        if (!writer)
+            writer = $Writer.create();
+        if (message.seq != null && Object.hasOwnProperty.call(message, "seq"))
+            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.seq);
+        if (message.request != null && Object.hasOwnProperty.call(message, "request"))
+            $root.google.protobuf.Any.encode(message.request, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+        return writer;
+    };
+
+    /**
+     * Encodes the specified Request message, length delimited. Does not implicitly {@link Request.verify|verify} messages.
+     * @function encodeDelimited
+     * @memberof Request
+     * @static
+     * @param {IRequest} message Request message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    Request.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+    };
+
+    /**
+     * Decodes a Request message from the specified reader or buffer.
+     * @function decode
+     * @memberof Request
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @param {number} [length] Message length if known beforehand
+     * @returns {Request} Request
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    Request.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader))
+            reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length, message = new $root.Request();
+        while (reader.pos < end) {
+            let tag = reader.uint32();
+            switch (tag >>> 3) {
+            case 1: {
+                    message.seq = reader.uint64();
+                    break;
+                }
+            case 2: {
+                    message.request = $root.google.protobuf.Any.decode(reader, reader.uint32());
+                    break;
+                }
+            default:
+                reader.skipType(tag & 7);
+                break;
+            }
+        }
+        return message;
+    };
+
+    /**
+     * Decodes a Request message from the specified reader or buffer, length delimited.
+     * @function decodeDelimited
+     * @memberof Request
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @returns {Request} Request
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    Request.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader))
+            reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+    };
+
+    /**
+     * Verifies a Request message.
+     * @function verify
+     * @memberof Request
+     * @static
+     * @param {Object.<string,*>} message Plain object to verify
+     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+     */
+    Request.verify = function verify(message) {
+        if (typeof message !== "object" || message === null)
+            return "object expected";
+        if (message.seq != null && message.hasOwnProperty("seq"))
+            if (!$util.isInteger(message.seq) && !(message.seq && $util.isInteger(message.seq.low) && $util.isInteger(message.seq.high)))
+                return "seq: integer|Long expected";
+        if (message.request != null && message.hasOwnProperty("request")) {
+            let error = $root.google.protobuf.Any.verify(message.request);
+            if (error)
+                return "request." + error;
+        }
+        return null;
+    };
+
+    /**
+     * Creates a Request message from a plain object. Also converts values to their respective internal types.
+     * @function fromObject
+     * @memberof Request
+     * @static
+     * @param {Object.<string,*>} object Plain object
+     * @returns {Request} Request
+     */
+    Request.fromObject = function fromObject(object) {
+        if (object instanceof $root.Request)
+            return object;
+        let message = new $root.Request();
+        if (object.seq != null)
+            if ($util.Long)
+                (message.seq = $util.Long.fromValue(object.seq)).unsigned = true;
+            else if (typeof object.seq === "string")
+                message.seq = parseInt(object.seq, 10);
+            else if (typeof object.seq === "number")
+                message.seq = object.seq;
+            else if (typeof object.seq === "object")
+                message.seq = new $util.LongBits(object.seq.low >>> 0, object.seq.high >>> 0).toNumber(true);
+        if (object.request != null) {
+            if (typeof object.request !== "object")
+                throw TypeError(".Request.request: object expected");
+            message.request = $root.google.protobuf.Any.fromObject(object.request);
+        }
+        return message;
+    };
+
+    /**
+     * Creates a plain object from a Request message. Also converts values to other types if specified.
+     * @function toObject
+     * @memberof Request
+     * @static
+     * @param {Request} message Request
+     * @param {$protobuf.IConversionOptions} [options] Conversion options
+     * @returns {Object.<string,*>} Plain object
+     */
+    Request.toObject = function toObject(message, options) {
+        if (!options)
+            options = {};
+        let object = {};
+        if (options.defaults) {
+            if ($util.Long) {
+                let long = new $util.Long(0, 0, true);
+                object.seq = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+            } else
+                object.seq = options.longs === String ? "0" : 0;
+            object.request = null;
+        }
+        if (message.seq != null && message.hasOwnProperty("seq"))
+            if (typeof message.seq === "number")
+                object.seq = options.longs === String ? String(message.seq) : message.seq;
+            else
+                object.seq = options.longs === String ? $util.Long.prototype.toString.call(message.seq) : options.longs === Number ? new $util.LongBits(message.seq.low >>> 0, message.seq.high >>> 0).toNumber(true) : message.seq;
+        if (message.request != null && message.hasOwnProperty("request"))
+            object.request = $root.google.protobuf.Any.toObject(message.request, options);
+        return object;
+    };
+
+    /**
+     * Converts this Request to JSON.
+     * @function toJSON
+     * @memberof Request
+     * @instance
+     * @returns {Object.<string,*>} JSON object
+     */
+    Request.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+    };
+
+    /**
+     * Gets the default type url for Request
+     * @function getTypeUrl
+     * @memberof Request
+     * @static
+     * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+     * @returns {string} The default type url
+     */
+    Request.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+        if (typeUrlPrefix === undefined) {
+            typeUrlPrefix = "type.googleapis.com";
+        }
+        return typeUrlPrefix + "/Request";
+    };
+
+    return Request;
+})();
+
+export const Response = $root.Response = (() => {
+
+    /**
+     * Properties of a Response.
+     * @exports IResponse
+     * @interface IResponse
+     * @property {number|Long|null} [seq] Response seq
+     * @property {string|null} [error] Response error
+     * @property {google.protobuf.IAny|null} [response] Response response
+     */
+
+    /**
+     * Constructs a new Response.
+     * @exports Response
+     * @classdesc Represents a Response.
+     * @implements IResponse
+     * @constructor
+     * @param {IResponse=} [properties] Properties to set
+     */
+    function Response(properties) {
+        if (properties)
+            for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                if (properties[keys[i]] != null)
+                    this[keys[i]] = properties[keys[i]];
+    }
+
+    /**
+     * Response seq.
+     * @member {number|Long} seq
+     * @memberof Response
+     * @instance
+     */
+    Response.prototype.seq = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+
+    /**
+     * Response error.
+     * @member {string} error
+     * @memberof Response
+     * @instance
+     */
+    Response.prototype.error = "";
+
+    /**
+     * Response response.
+     * @member {google.protobuf.IAny|null|undefined} response
+     * @memberof Response
+     * @instance
+     */
+    Response.prototype.response = null;
+
+    /**
+     * Creates a new Response instance using the specified properties.
+     * @function create
+     * @memberof Response
+     * @static
+     * @param {IResponse=} [properties] Properties to set
+     * @returns {Response} Response instance
+     */
+    Response.create = function create(properties) {
+        return new Response(properties);
+    };
+
+    /**
+     * Encodes the specified Response message. Does not implicitly {@link Response.verify|verify} messages.
+     * @function encode
+     * @memberof Response
+     * @static
+     * @param {IResponse} message Response message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    Response.encode = function encode(message, writer) {
+        if (!writer)
+            writer = $Writer.create();
+        if (message.seq != null && Object.hasOwnProperty.call(message, "seq"))
+            writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.seq);
+        if (message.error != null && Object.hasOwnProperty.call(message, "error"))
+            writer.uint32(/* id 2, wireType 2 =*/18).string(message.error);
+        if (message.response != null && Object.hasOwnProperty.call(message, "response"))
+            $root.google.protobuf.Any.encode(message.response, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+        return writer;
+    };
+
+    /**
+     * Encodes the specified Response message, length delimited. Does not implicitly {@link Response.verify|verify} messages.
+     * @function encodeDelimited
+     * @memberof Response
+     * @static
+     * @param {IResponse} message Response message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    Response.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+    };
+
+    /**
+     * Decodes a Response message from the specified reader or buffer.
+     * @function decode
+     * @memberof Response
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @param {number} [length] Message length if known beforehand
+     * @returns {Response} Response
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    Response.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader))
+            reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length, message = new $root.Response();
+        while (reader.pos < end) {
+            let tag = reader.uint32();
+            switch (tag >>> 3) {
+            case 1: {
+                    message.seq = reader.uint64();
+                    break;
+                }
+            case 2: {
+                    message.error = reader.string();
+                    break;
+                }
+            case 3: {
+                    message.response = $root.google.protobuf.Any.decode(reader, reader.uint32());
+                    break;
+                }
+            default:
+                reader.skipType(tag & 7);
+                break;
+            }
+        }
+        return message;
+    };
+
+    /**
+     * Decodes a Response message from the specified reader or buffer, length delimited.
+     * @function decodeDelimited
+     * @memberof Response
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @returns {Response} Response
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    Response.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader))
+            reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+    };
+
+    /**
+     * Verifies a Response message.
+     * @function verify
+     * @memberof Response
+     * @static
+     * @param {Object.<string,*>} message Plain object to verify
+     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+     */
+    Response.verify = function verify(message) {
+        if (typeof message !== "object" || message === null)
+            return "object expected";
+        if (message.seq != null && message.hasOwnProperty("seq"))
+            if (!$util.isInteger(message.seq) && !(message.seq && $util.isInteger(message.seq.low) && $util.isInteger(message.seq.high)))
+                return "seq: integer|Long expected";
+        if (message.error != null && message.hasOwnProperty("error"))
+            if (!$util.isString(message.error))
+                return "error: string expected";
+        if (message.response != null && message.hasOwnProperty("response")) {
+            let error = $root.google.protobuf.Any.verify(message.response);
+            if (error)
+                return "response." + error;
+        }
+        return null;
+    };
+
+    /**
+     * Creates a Response message from a plain object. Also converts values to their respective internal types.
+     * @function fromObject
+     * @memberof Response
+     * @static
+     * @param {Object.<string,*>} object Plain object
+     * @returns {Response} Response
+     */
+    Response.fromObject = function fromObject(object) {
+        if (object instanceof $root.Response)
+            return object;
+        let message = new $root.Response();
+        if (object.seq != null)
+            if ($util.Long)
+                (message.seq = $util.Long.fromValue(object.seq)).unsigned = true;
+            else if (typeof object.seq === "string")
+                message.seq = parseInt(object.seq, 10);
+            else if (typeof object.seq === "number")
+                message.seq = object.seq;
+            else if (typeof object.seq === "object")
+                message.seq = new $util.LongBits(object.seq.low >>> 0, object.seq.high >>> 0).toNumber(true);
+        if (object.error != null)
+            message.error = String(object.error);
+        if (object.response != null) {
+            if (typeof object.response !== "object")
+                throw TypeError(".Response.response: object expected");
+            message.response = $root.google.protobuf.Any.fromObject(object.response);
+        }
+        return message;
+    };
+
+    /**
+     * Creates a plain object from a Response message. Also converts values to other types if specified.
+     * @function toObject
+     * @memberof Response
+     * @static
+     * @param {Response} message Response
+     * @param {$protobuf.IConversionOptions} [options] Conversion options
+     * @returns {Object.<string,*>} Plain object
+     */
+    Response.toObject = function toObject(message, options) {
+        if (!options)
+            options = {};
+        let object = {};
+        if (options.defaults) {
+            if ($util.Long) {
+                let long = new $util.Long(0, 0, true);
+                object.seq = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+            } else
+                object.seq = options.longs === String ? "0" : 0;
+            object.error = "";
+            object.response = null;
+        }
+        if (message.seq != null && message.hasOwnProperty("seq"))
+            if (typeof message.seq === "number")
+                object.seq = options.longs === String ? String(message.seq) : message.seq;
+            else
+                object.seq = options.longs === String ? $util.Long.prototype.toString.call(message.seq) : options.longs === Number ? new $util.LongBits(message.seq.low >>> 0, message.seq.high >>> 0).toNumber(true) : message.seq;
+        if (message.error != null && message.hasOwnProperty("error"))
+            object.error = message.error;
+        if (message.response != null && message.hasOwnProperty("response"))
+            object.response = $root.google.protobuf.Any.toObject(message.response, options);
+        return object;
+    };
+
+    /**
+     * Converts this Response to JSON.
+     * @function toJSON
+     * @memberof Response
+     * @instance
+     * @returns {Object.<string,*>} JSON object
+     */
+    Response.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+    };
+
+    /**
+     * Gets the default type url for Response
+     * @function getTypeUrl
+     * @memberof Response
+     * @static
+     * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+     * @returns {string} The default type url
+     */
+    Response.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+        if (typeUrlPrefix === undefined) {
+            typeUrlPrefix = "type.googleapis.com";
+        }
+        return typeUrlPrefix + "/Response";
+    };
+
+    return Response;
+})();
+
+export const Event = $root.Event = (() => {
+
+    /**
+     * Properties of an Event.
+     * @exports IEvent
+     * @interface IEvent
+     * @property {google.protobuf.IAny|null} [event] Event event
+     */
+
+    /**
+     * Constructs a new Event.
+     * @exports Event
+     * @classdesc Represents an Event.
+     * @implements IEvent
+     * @constructor
+     * @param {IEvent=} [properties] Properties to set
+     */
+    function Event(properties) {
+        if (properties)
+            for (let keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                if (properties[keys[i]] != null)
+                    this[keys[i]] = properties[keys[i]];
+    }
+
+    /**
+     * Event event.
+     * @member {google.protobuf.IAny|null|undefined} event
+     * @memberof Event
+     * @instance
+     */
+    Event.prototype.event = null;
+
+    /**
+     * Creates a new Event instance using the specified properties.
+     * @function create
+     * @memberof Event
+     * @static
+     * @param {IEvent=} [properties] Properties to set
+     * @returns {Event} Event instance
+     */
+    Event.create = function create(properties) {
+        return new Event(properties);
+    };
+
+    /**
+     * Encodes the specified Event message. Does not implicitly {@link Event.verify|verify} messages.
+     * @function encode
+     * @memberof Event
+     * @static
+     * @param {IEvent} message Event message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    Event.encode = function encode(message, writer) {
+        if (!writer)
+            writer = $Writer.create();
+        if (message.event != null && Object.hasOwnProperty.call(message, "event"))
+            $root.google.protobuf.Any.encode(message.event, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+        return writer;
+    };
+
+    /**
+     * Encodes the specified Event message, length delimited. Does not implicitly {@link Event.verify|verify} messages.
+     * @function encodeDelimited
+     * @memberof Event
+     * @static
+     * @param {IEvent} message Event message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    Event.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+    };
+
+    /**
+     * Decodes an Event message from the specified reader or buffer.
+     * @function decode
+     * @memberof Event
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @param {number} [length] Message length if known beforehand
+     * @returns {Event} Event
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    Event.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader))
+            reader = $Reader.create(reader);
+        let end = length === undefined ? reader.len : reader.pos + length, message = new $root.Event();
+        while (reader.pos < end) {
+            let tag = reader.uint32();
+            switch (tag >>> 3) {
+            case 1: {
+                    message.event = $root.google.protobuf.Any.decode(reader, reader.uint32());
+                    break;
+                }
+            default:
+                reader.skipType(tag & 7);
+                break;
+            }
+        }
+        return message;
+    };
+
+    /**
+     * Decodes an Event message from the specified reader or buffer, length delimited.
+     * @function decodeDelimited
+     * @memberof Event
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @returns {Event} Event
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    Event.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader))
+            reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+    };
+
+    /**
+     * Verifies an Event message.
+     * @function verify
+     * @memberof Event
+     * @static
+     * @param {Object.<string,*>} message Plain object to verify
+     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+     */
+    Event.verify = function verify(message) {
+        if (typeof message !== "object" || message === null)
+            return "object expected";
+        if (message.event != null && message.hasOwnProperty("event")) {
+            let error = $root.google.protobuf.Any.verify(message.event);
+            if (error)
+                return "event." + error;
+        }
+        return null;
+    };
+
+    /**
+     * Creates an Event message from a plain object. Also converts values to their respective internal types.
+     * @function fromObject
+     * @memberof Event
+     * @static
+     * @param {Object.<string,*>} object Plain object
+     * @returns {Event} Event
+     */
+    Event.fromObject = function fromObject(object) {
+        if (object instanceof $root.Event)
+            return object;
+        let message = new $root.Event();
+        if (object.event != null) {
+            if (typeof object.event !== "object")
+                throw TypeError(".Event.event: object expected");
+            message.event = $root.google.protobuf.Any.fromObject(object.event);
+        }
+        return message;
+    };
+
+    /**
+     * Creates a plain object from an Event message. Also converts values to other types if specified.
+     * @function toObject
+     * @memberof Event
+     * @static
+     * @param {Event} message Event
+     * @param {$protobuf.IConversionOptions} [options] Conversion options
+     * @returns {Object.<string,*>} Plain object
+     */
+    Event.toObject = function toObject(message, options) {
+        if (!options)
+            options = {};
+        let object = {};
+        if (options.defaults)
+            object.event = null;
+        if (message.event != null && message.hasOwnProperty("event"))
+            object.event = $root.google.protobuf.Any.toObject(message.event, options);
+        return object;
+    };
+
+    /**
+     * Converts this Event to JSON.
+     * @function toJSON
+     * @memberof Event
+     * @instance
+     * @returns {Object.<string,*>} JSON object
+     */
+    Event.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+    };
+
+    /**
+     * Gets the default type url for Event
+     * @function getTypeUrl
+     * @memberof Event
+     * @static
+     * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+     * @returns {string} The default type url
+     */
+    Event.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+        if (typeUrlPrefix === undefined) {
+            typeUrlPrefix = "type.googleapis.com";
+        }
+        return typeUrlPrefix + "/Event";
+    };
+
+    return Event;
 })();
 
 export const google = $root.google = (() => {
