@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
-    "proto": "pbjs -t static-module -w es6 -o src/messages.js ../messages.proto && pbts -o src/messages.d.ts src/messages.js"
+    "protobufjs": "pbjs -t static-module -w es6 -o src/messages.js ../messages.proto && pbts -o src/messages.d.ts src/messages.js",
+    "protobufes": "protoc --plugin=node_modules/.bin/protoc-gen-es --es_out=src/genpb/ --es_opt=target=ts -I=../ ../messages.proto",
+    "proto": "yarn run protobufjs && yarn run protobufes"
   },
   "dependencies": {
     "@bufbuild/protobuf": "^2.0.0",
