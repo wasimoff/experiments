@@ -7,6 +7,10 @@ import { decode as dechunker } from "it-length-prefixed";
 import { Writer as pbWriter } from "protobufjs";
 import { Counter } from "./messages.js";
 import { Encoder, decodeMultiStream, encode, decode } from "@msgpack/msgpack";
+// check protobufjs vs. protobuf-es
+import { toBinary, fromBinary } from "@bufbuild/protobuf";
+import { sizeDelimitedDecodeStream, sizeDelimitedEncode } from "@bufbuild/protobuf/wire";
+import { CounterSchema } from "./genpb/messages_pb";
 
 const measure = "https://localhost:4080/measure"
 const wsurl = "wss://localhost:4080"
@@ -18,13 +22,13 @@ value: Uint8Array.from(certhash.match(/../g)!.map(b => parseInt(b, 16))),
 
 
 // WebSocket + Protobuf
-async function benchWebsocketProto() {
+async function benchWebsocketProtobufjs() {
 
-  const conn = new WebSocket(`${wsurl}/websocket/bench/proto`, []);
+  const conn = new WebSocket(`${wsurl}/websocket/protobuf?key=websocket/protobufjs`, []);
   conn.binaryType = "arraybuffer";
-  conn.addEventListener("open", ev => console.log("connected", (<any>ev.target).url));
+  conn.addEventListener("open", ev => console.debug("connected", (<any>ev.target).url));
   const done = new Promise<void>(done => conn.addEventListener("close", ev => {
-    console.log("closed", (<any>ev.target).url); done();
+    console.debug("closed", (<any>ev.target).url); done();
   }));
   // counter benchmark, just reply with the enclosed counter + 1
   conn.addEventListener("message", async ev => {
@@ -37,15 +41,34 @@ async function benchWebsocketProto() {
   return done;
 
 };
+async function benchWebsocketProtobufES() {
+
+  const conn = new WebSocket(`${wsurl}/websocket/protobuf?key=websocket/protobuf-es`, []);
+  conn.binaryType = "arraybuffer";
+  conn.addEventListener("open", ev => console.debug("connected", (<any>ev.target).url));
+  const done = new Promise<void>(done => conn.addEventListener("close", ev => {
+    console.debug("closed", (<any>ev.target).url); done();
+  }));
+  // counter benchmark, just reply with the enclosed counter + 1
+  conn.addEventListener("message", async ev => {
+    if (ev.data instanceof ArrayBuffer) {
+      const counter = fromBinary(CounterSchema, new Uint8Array(ev.data));
+      counter.seq += BigInt(1); // increment in-place
+      conn.send(toBinary(CounterSchema, counter));
+    };
+  });
+  return done;
+
+};
 
 // WebSocket + JSON
 async function benchWebsocketJson() {
 
-  const conn = new WebSocket(`${wsurl}/websocket/bench/json`, []);
+  const conn = new WebSocket(`${wsurl}/websocket/json`, []);
   conn.binaryType = "arraybuffer";
-  conn.addEventListener("open", ev => console.log("connected", (<any>ev.target).url));
+  conn.addEventListener("open", ev => console.debug("connected", (<any>ev.target).url));
   const done = new Promise<void>(done => conn.addEventListener("close", ev => {
-    console.log("closed", (<any>ev.target).url); done();
+    console.debug("closed", (<any>ev.target).url); done();
   }));
   // counter benchmark, just reply with the enclosed counter + 1
   conn.addEventListener("message", async ev => {
@@ -63,11 +86,11 @@ async function benchWebsocketJson() {
 // WebSocket + MessagePack
 async function benchWebsocketMessagepack() {
 
-  const conn = new WebSocket(`${wsurl}/websocket/bench/msgp`, []);
+  const conn = new WebSocket(`${wsurl}/websocket/messagepack`, []);
   conn.binaryType = "arraybuffer";
-  conn.addEventListener("open", ev => console.log("connected", (<any>ev.target).url));
+  conn.addEventListener("open", ev => console.debug("connected", (<any>ev.target).url));
   const done = new Promise<void>(done => conn.addEventListener("close", ev => {
-    console.log("closed", (<any>ev.target).url); done();
+    console.debug("closed", (<any>ev.target).url); done();
   }));
   // counter benchmark, just reply with the enclosed counter + 1
   conn.addEventListener("message", async ev => {
@@ -82,12 +105,12 @@ async function benchWebsocketMessagepack() {
 };
 
 // WebTransport + Protobuf
-async function benchWebtransportProto() {
+async function benchWebtransportProtobufjs() {
 
-  const url = `${wturl}/webtransport/bench/proto`;
+  const url = `${wturl}/webtransport/protobuf?key=webtransport/protobufjs`;
   const conn = new WebTransport(url, { serverCertificateHashes });
-  await conn.ready; console.log("connected", url);
-  conn.closed.catch(() => {}).finally(() => console.log("closed", url));
+  await conn.ready; console.debug("connected", url);
+  conn.closed.catch(() => {}).finally(() => console.debug("closed", url));
 
   try {
     // accept a bidirectional stream for benchmark
@@ -107,13 +130,34 @@ async function benchWebtransportProto() {
   } catch { };
 };
 
+async function benchWebtransportProtobufES() {
+
+  const url = `${wturl}/webtransport/protobuf?key=webtransport/protobuf-es`;
+  const conn = new WebTransport(url, { serverCertificateHashes });
+  await conn.ready; console.debug("connected", url);
+  conn.closed.catch(() => {}).finally(() => console.debug("closed", url));
+
+  try {
+    // accept a bidirectional stream for benchmark
+    for await (const s of conn.incomingBidirectionalStreams as any) {
+      const stream: WebTransportBidirectionalStream = s;
+      const writer = stream.writable.getWriter();
+      for await (const counter of sizeDelimitedDecodeStream(CounterSchema, stream.readable as any)) {
+        if (counter.seq == undefined || Number.isNaN(counter.seq)) counter.seq = BigInt(0);
+        counter.seq += BigInt(1); // increment in-place
+        writer.write(sizeDelimitedEncode(CounterSchema, counter));
+      }
+    }
+  } catch { };
+};
+
 // WebTransport + Messagepack
 async function benchWebtransportMessagepack() {
 
-  const url = `${wturl}/webtransport/bench/msgp`;
+  const url = `${wturl}/webtransport/messagepack`;
   const conn = new WebTransport(url, { serverCertificateHashes });
-  await conn.ready; console.log("connected", url);
-  conn.closed.catch(() => {}).finally(() => console.log("closed", url));
+  await conn.ready; console.debug("connected", url);
+  conn.closed.catch(() => {}).finally(() => console.debug("closed", url));
 
   try {
     // accept a bidirectional stream for benchmark
@@ -132,16 +176,22 @@ async function benchWebtransportMessagepack() {
 };
 
 // run the benchmarks
-const countTo = ref(10000);
+const countTo = ref(200);
 const addNoise = ref(0);
 const results = ref<Awaited<ReturnType<typeof benchmark>>[]>([]);
 async function benchmark(count = countTo.value, noise = addNoise.value) {
-  await fetch(`${measure}/new?count=${count}&noise=${noise}`);
-  await benchWebsocketJson();
-  await benchWebsocketProto();
-  await benchWebsocketMessagepack();
-  await benchWebtransportProto();
-  await benchWebtransportMessagepack();
+
+  let delay = async () => new Promise(r => setTimeout(r, 100));
+  await fetch(`${measure}/new?count=${count}&noise=${noise}`); await delay();
+
+  // await benchWebsocketJson(); await delay();
+  // await benchWebsocketMessagepack(); await delay();
+  await benchWebsocketProtobufjs(); await delay();
+  await benchWebsocketProtobufES(); await delay();
+  // await benchWebtransportMessagepack(); await delay();
+  await benchWebtransportProtobufjs(); await delay();
+  await benchWebtransportProtobufES(); await delay();
+
   let res = await fetch(`${measure}/dump`);
   return await res.json() as {
     addNoise: number,

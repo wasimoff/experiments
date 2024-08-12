@@ -1,0 +1,830 @@
+{
+  "start": "2024-08-10T23:58:35.381Z",
+  "args": [
+    [
+      200,
+      0
+    ],
+    [
+      200,
+      1024
+    ],
+    [
+      200,
+      8192
+    ],
+    [
+      200,
+      65536
+    ],
+    [
+      200,
+      262144
+    ]
+  ],
+  "repetitions": 20,
+  "wturl": "https://localhost:4443",
+  "wsurl": "wss://localhost:4080",
+  "results": [
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 40,
+      "websocket/protobufjs": 51,
+      "webtransport/protobuf-es": 65,
+      "webtransport/protobufjs": 67
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 41,
+      "websocket/protobufjs": 29,
+      "webtransport/protobuf-es": 63,
+      "webtransport/protobufjs": 58
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 39,
+      "websocket/protobufjs": 28,
+      "webtransport/protobuf-es": 75,
+      "webtransport/protobufjs": 91
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 44,
+      "websocket/protobufjs": 30,
+      "webtransport/protobuf-es": 67,
+      "webtransport/protobufjs": 61
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 40,
+      "websocket/protobufjs": 42,
+      "webtransport/protobuf-es": 65,
+      "webtransport/protobufjs": 84
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 40,
+      "websocket/protobufjs": 31,
+      "webtransport/protobuf-es": 69,
+      "webtransport/protobufjs": 68
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 41,
+      "websocket/protobufjs": 29,
+      "webtransport/protobuf-es": 67,
+      "webtransport/protobufjs": 85
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 47,
+      "websocket/protobufjs": 49,
+      "webtransport/protobuf-es": 67,
+      "webtransport/protobufjs": 54
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 44,
+      "websocket/protobufjs": 30,
+      "webtransport/protobuf-es": 76,
+      "webtransport/protobufjs": 55
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 41,
+      "websocket/protobufjs": 44,
+      "webtransport/protobuf-es": 63,
+      "webtransport/protobufjs": 69
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 88,
+      "websocket/protobufjs": 30,
+      "webtransport/protobuf-es": 62,
+      "webtransport/protobufjs": 54
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 48,
+      "websocket/protobufjs": 30,
+      "webtransport/protobuf-es": 80,
+      "webtransport/protobufjs": 56
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 57,
+      "websocket/protobufjs": 30,
+      "webtransport/protobuf-es": 66,
+      "webtransport/protobufjs": 53
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 42,
+      "websocket/protobufjs": 33,
+      "webtransport/protobuf-es": 66,
+      "webtransport/protobufjs": 64
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 43,
+      "websocket/protobufjs": 28,
+      "webtransport/protobuf-es": 69,
+      "webtransport/protobufjs": 50
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 39,
+      "websocket/protobufjs": 31,
+      "webtransport/protobuf-es": 65,
+      "webtransport/protobufjs": 56
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 41,
+      "websocket/protobufjs": 30,
+      "webtransport/protobuf-es": 70,
+      "webtransport/protobufjs": 64
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 39,
+      "websocket/protobufjs": 28,
+      "webtransport/protobuf-es": 77,
+      "webtransport/protobufjs": 57
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 41,
+      "websocket/protobufjs": 27,
+      "webtransport/protobuf-es": 67,
+      "webtransport/protobufjs": 58
+    },
+    {
+      "addNoise": 0,
+      "countTo": 200,
+      "websocket/protobuf-es": 42,
+      "websocket/protobufjs": 29,
+      "webtransport/protobuf-es": 67,
+      "webtransport/protobufjs": 58
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 45,
+      "websocket/protobufjs": 35,
+      "webtransport/protobuf-es": 77,
+      "webtransport/protobufjs": 67
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 46,
+      "websocket/protobufjs": 48,
+      "webtransport/protobuf-es": 73,
+      "webtransport/protobufjs": 60
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 46,
+      "websocket/protobufjs": 35,
+      "webtransport/protobuf-es": 77,
+      "webtransport/protobufjs": 73
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 47,
+      "websocket/protobufjs": 50,
+      "webtransport/protobuf-es": 72,
+      "webtransport/protobufjs": 61
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 48,
+      "websocket/protobufjs": 35,
+      "webtransport/protobuf-es": 83,
+      "webtransport/protobufjs": 68
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 46,
+      "websocket/protobufjs": 49,
+      "webtransport/protobuf-es": 94,
+      "webtransport/protobufjs": 69
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 61,
+      "websocket/protobufjs": 70,
+      "webtransport/protobuf-es": 95,
+      "webtransport/protobufjs": 57
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 49,
+      "websocket/protobufjs": 53,
+      "webtransport/protobuf-es": 93,
+      "webtransport/protobufjs": 60
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 60,
+      "websocket/protobufjs": 36,
+      "webtransport/protobuf-es": 90,
+      "webtransport/protobufjs": 60
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 74,
+      "websocket/protobufjs": 32,
+      "webtransport/protobuf-es": 68,
+      "webtransport/protobufjs": 89
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 48,
+      "websocket/protobufjs": 51,
+      "webtransport/protobuf-es": 81,
+      "webtransport/protobufjs": 58
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 60,
+      "websocket/protobufjs": 54,
+      "webtransport/protobuf-es": 114,
+      "webtransport/protobufjs": 60
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 48,
+      "websocket/protobufjs": 50,
+      "webtransport/protobuf-es": 82,
+      "webtransport/protobufjs": 83
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 61,
+      "websocket/protobufjs": 37,
+      "webtransport/protobuf-es": 74,
+      "webtransport/protobufjs": 58
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 61,
+      "websocket/protobufjs": 51,
+      "webtransport/protobuf-es": 71,
+      "webtransport/protobufjs": 66
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 47,
+      "websocket/protobufjs": 51,
+      "webtransport/protobuf-es": 82,
+      "webtransport/protobufjs": 60
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 59,
+      "websocket/protobufjs": 37,
+      "webtransport/protobuf-es": 70,
+      "webtransport/protobufjs": 61
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 51,
+      "websocket/protobufjs": 37,
+      "webtransport/protobuf-es": 83,
+      "webtransport/protobufjs": 65
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 47,
+      "websocket/protobufjs": 39,
+      "webtransport/protobuf-es": 82,
+      "webtransport/protobufjs": 64
+    },
+    {
+      "addNoise": 1024,
+      "countTo": 200,
+      "websocket/protobuf-es": 67,
+      "websocket/protobufjs": 33,
+      "webtransport/protobuf-es": 90,
+      "webtransport/protobufjs": 64
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 86,
+      "websocket/protobufjs": 63,
+      "webtransport/protobuf-es": 127,
+      "webtransport/protobufjs": 93
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 83,
+      "websocket/protobufjs": 65,
+      "webtransport/protobuf-es": 106,
+      "webtransport/protobufjs": 92
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 75,
+      "websocket/protobufjs": 68,
+      "webtransport/protobuf-es": 105,
+      "webtransport/protobufjs": 101
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 76,
+      "websocket/protobufjs": 69,
+      "webtransport/protobuf-es": 104,
+      "webtransport/protobufjs": 87
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 81,
+      "websocket/protobufjs": 71,
+      "webtransport/protobuf-es": 110,
+      "webtransport/protobufjs": 92
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 72,
+      "websocket/protobufjs": 86,
+      "webtransport/protobuf-es": 105,
+      "webtransport/protobufjs": 93
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 81,
+      "websocket/protobufjs": 66,
+      "webtransport/protobuf-es": 106,
+      "webtransport/protobufjs": 89
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 87,
+      "websocket/protobufjs": 66,
+      "webtransport/protobuf-es": 112,
+      "webtransport/protobufjs": 92
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 75,
+      "websocket/protobufjs": 69,
+      "webtransport/protobuf-es": 105,
+      "webtransport/protobufjs": 92
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 84,
+      "websocket/protobufjs": 73,
+      "webtransport/protobuf-es": 125,
+      "webtransport/protobufjs": 91
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 79,
+      "websocket/protobufjs": 67,
+      "webtransport/protobuf-es": 110,
+      "webtransport/protobufjs": 117
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 74,
+      "websocket/protobufjs": 66,
+      "webtransport/protobuf-es": 107,
+      "webtransport/protobufjs": 92
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 80,
+      "websocket/protobufjs": 72,
+      "webtransport/protobuf-es": 105,
+      "webtransport/protobufjs": 98
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 79,
+      "websocket/protobufjs": 73,
+      "webtransport/protobuf-es": 114,
+      "webtransport/protobufjs": 94
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 81,
+      "websocket/protobufjs": 68,
+      "webtransport/protobuf-es": 107,
+      "webtransport/protobufjs": 109
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 81,
+      "websocket/protobufjs": 61,
+      "webtransport/protobuf-es": 110,
+      "webtransport/protobufjs": 93
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 77,
+      "websocket/protobufjs": 67,
+      "webtransport/protobuf-es": 104,
+      "webtransport/protobufjs": 110
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 77,
+      "websocket/protobufjs": 118,
+      "webtransport/protobuf-es": 106,
+      "webtransport/protobufjs": 92
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 83,
+      "websocket/protobufjs": 70,
+      "webtransport/protobuf-es": 104,
+      "webtransport/protobufjs": 100
+    },
+    {
+      "addNoise": 8192,
+      "countTo": 200,
+      "websocket/protobuf-es": 82,
+      "websocket/protobufjs": 66,
+      "webtransport/protobuf-es": 124,
+      "webtransport/protobufjs": 91
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 225,
+      "websocket/protobufjs": 189,
+      "webtransport/protobuf-es": 349,
+      "webtransport/protobufjs": 311
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 206,
+      "websocket/protobufjs": 189,
+      "webtransport/protobuf-es": 334,
+      "webtransport/protobufjs": 327
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 225,
+      "websocket/protobufjs": 194,
+      "webtransport/protobuf-es": 359,
+      "webtransport/protobufjs": 312
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 216,
+      "websocket/protobufjs": 193,
+      "webtransport/protobuf-es": 330,
+      "webtransport/protobufjs": 314
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 213,
+      "websocket/protobufjs": 187,
+      "webtransport/protobuf-es": 346,
+      "webtransport/protobufjs": 327
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 207,
+      "websocket/protobufjs": 187,
+      "webtransport/protobuf-es": 344,
+      "webtransport/protobufjs": 318
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 199,
+      "websocket/protobufjs": 188,
+      "webtransport/protobuf-es": 342,
+      "webtransport/protobufjs": 320
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 217,
+      "websocket/protobufjs": 189,
+      "webtransport/protobuf-es": 352,
+      "webtransport/protobufjs": 316
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 196,
+      "websocket/protobufjs": 185,
+      "webtransport/protobuf-es": 343,
+      "webtransport/protobufjs": 338
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 196,
+      "websocket/protobufjs": 210,
+      "webtransport/protobuf-es": 337,
+      "webtransport/protobufjs": 310
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 201,
+      "websocket/protobufjs": 190,
+      "webtransport/protobuf-es": 349,
+      "webtransport/protobufjs": 322
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 203,
+      "websocket/protobufjs": 194,
+      "webtransport/protobuf-es": 348,
+      "webtransport/protobufjs": 319
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 217,
+      "websocket/protobufjs": 189,
+      "webtransport/protobuf-es": 355,
+      "webtransport/protobufjs": 318
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 197,
+      "websocket/protobufjs": 182,
+      "webtransport/protobuf-es": 344,
+      "webtransport/protobufjs": 343
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 203,
+      "websocket/protobufjs": 205,
+      "webtransport/protobuf-es": 339,
+      "webtransport/protobufjs": 317
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 198,
+      "websocket/protobufjs": 186,
+      "webtransport/protobuf-es": 356,
+      "webtransport/protobufjs": 331
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 201,
+      "websocket/protobufjs": 194,
+      "webtransport/protobuf-es": 348,
+      "webtransport/protobufjs": 315
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 208,
+      "websocket/protobufjs": 190,
+      "webtransport/protobuf-es": 360,
+      "webtransport/protobufjs": 307
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 202,
+      "websocket/protobufjs": 195,
+      "webtransport/protobuf-es": 341,
+      "webtransport/protobufjs": 315
+    },
+    {
+      "addNoise": 65536,
+      "countTo": 200,
+      "websocket/protobuf-es": 197,
+      "websocket/protobufjs": 199,
+      "webtransport/protobuf-es": 338,
+      "webtransport/protobufjs": 312
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 609,
+      "websocket/protobufjs": 600,
+      "webtransport/protobuf-es": 1257,
+      "webtransport/protobufjs": 1048
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 612,
+      "websocket/protobufjs": 609,
+      "webtransport/protobuf-es": 1289,
+      "webtransport/protobufjs": 1089
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 615,
+      "websocket/protobufjs": 599,
+      "webtransport/protobuf-es": 1266,
+      "webtransport/protobufjs": 1108
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 613,
+      "websocket/protobufjs": 600,
+      "webtransport/protobuf-es": 1278,
+      "webtransport/protobufjs": 1113
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 623,
+      "websocket/protobufjs": 606,
+      "webtransport/protobuf-es": 1276,
+      "webtransport/protobufjs": 1093
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 607,
+      "websocket/protobufjs": 602,
+      "webtransport/protobuf-es": 1305,
+      "webtransport/protobufjs": 1100
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 619,
+      "websocket/protobufjs": 612,
+      "webtransport/protobuf-es": 1268,
+      "webtransport/protobufjs": 1135
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 606,
+      "websocket/protobufjs": 604,
+      "webtransport/protobuf-es": 1343,
+      "webtransport/protobufjs": 1122
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 613,
+      "websocket/protobufjs": 609,
+      "webtransport/protobuf-es": 1254,
+      "webtransport/protobufjs": 1144
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 613,
+      "websocket/protobufjs": 616,
+      "webtransport/protobuf-es": 1251,
+      "webtransport/protobufjs": 1113
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 628,
+      "websocket/protobufjs": 599,
+      "webtransport/protobuf-es": 1246,
+      "webtransport/protobufjs": 1114
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 623,
+      "websocket/protobufjs": 606,
+      "webtransport/protobuf-es": 1244,
+      "webtransport/protobufjs": 1094
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 613,
+      "websocket/protobufjs": 619,
+      "webtransport/protobuf-es": 1265,
+      "webtransport/protobufjs": 1126
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 619,
+      "websocket/protobufjs": 592,
+      "webtransport/protobuf-es": 1259,
+      "webtransport/protobufjs": 1124
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 626,
+      "websocket/protobufjs": 601,
+      "webtransport/protobuf-es": 1262,
+      "webtransport/protobufjs": 1116
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 624,
+      "websocket/protobufjs": 611,
+      "webtransport/protobuf-es": 1239,
+      "webtransport/protobufjs": 1120
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 626,
+      "websocket/protobufjs": 598,
+      "webtransport/protobuf-es": 1278,
+      "webtransport/protobufjs": 1100
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 616,
+      "websocket/protobufjs": 604,
+      "webtransport/protobuf-es": 1261,
+      "webtransport/protobufjs": 1108
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 618,
+      "websocket/protobufjs": 611,
+      "webtransport/protobuf-es": 1299,
+      "webtransport/protobufjs": 1127
+    },
+    {
+      "addNoise": 262144,
+      "countTo": 200,
+      "websocket/protobuf-es": 623,
+      "websocket/protobufjs": 600,
+      "webtransport/protobuf-es": 1235,
+      "webtransport/protobufjs": 1111
+    }
+  ]
+}
