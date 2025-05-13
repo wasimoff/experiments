@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pyodide Worker Tab</title>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.27.5/full/pyodide.js"></script>
+</head>
+
+<body>
+
+    <h1>Pyodide Worker Tab</h1>
+    <textarea id="output" rows="20" cols="80" readonly></textarea><br>
+
+    <script>
+        let pyodide;
+        let pyodideReady = false;
+        let socket = new WebSocket("ws://" + location.host + "/ws");;
+
+        socket.onopen = () => console.log("WebSocket connection established");
+        socket.onclose = () => console.log("WebSocket connection closed");
+
+        function send(message) {
+            console.log(message);
+            socket.send(String(message));
+        };
+
+        async function load() {
+            pyodide = await loadPyodide({
+                fullStdLib: true,
+                packages: [ "micropip", "numpy" ],
+            });
+            await pyodide.runPython("import micropip as pip");
+            pyodideReady = true;
+            console.log("Pyodide is ready");
+
+            await pyodide.runPython(`
+import numpy as np
+from timeit import timeit
+
+def dots(n):
+  A, B = np.random.random((n, n)), np.random.random((n, n))
+  return timeit(lambda: np.dot(A, B), number=10) / 10.0
+`);
+        };
+        load();
+
+        socket.onmessage = async function(event) {
+            if (!pyodideReady) {
+                send("Pyodide is not ready yet!");
+                return;
+            }
+
+            const command = event.data;
+            const output = document.getElementById("output");
+            output.value += `> ${command}\n`;
+            try {
+                const result = await pyodide.runPython(command);
+                output.value += `${result}\n`;
+                send(result);
+            } catch (err) {
+                output.value += `Error: ${err.message}\n`;
+                send(err.message);
+            }
+
+        };
+
+    </script>
+
+</body>
+</html>
