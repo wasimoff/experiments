@@ -1,0 +1,5 @@
+https://github.com/golang/benchmarks @ 5d1333110d48d9a8eb5cda5c3b44a18b80712ba2
+
+Go:        go version go1.24.0 linux/amd64
+Wasmtime:  wasmtime 29.0.1 (58282df89 2025-01-21)
+Kernel:    Linux 5.15.167.4-microsoft-standard-WSL2 x86_64 GNU/Linux

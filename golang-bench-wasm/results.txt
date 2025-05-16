@@ -1,0 +1,98 @@
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+consumption=1690KB npkg=15
+# cpuprof=/tmp/10.prof.txt
+# memprof=/tmp/11.prof.txt
+BenchmarkGarbage/benchmem-MB=64-1     2000	   6648915 ns/op	   4155224 GC-bytes-from-system	     27926 STW-ns/GC	      1508 STW-ns/op	   2744878 allocated-bytes/op	     66910 allocs/op	 130539800 bytes-from-system	 121405440 heap-bytes-from-system	   4749760 other-bytes-from-system	 128958464 peak-RSS-bytes	1329958912 peak-VM-bytes	    229376 stack-bytes-from-system	   6674369 user+sys-ns/op
+# memprof=/tmp/22.prof.txt
+# cpuprof=/tmp/21.prof.txt
+BenchmarkGarbage/benchmem-MB=64-1     2000	   6925679 ns/op	   4260712 GC-bytes-from-system	     28733 STW-ns/GC	      1537 STW-ns/op	   2745447 allocated-bytes/op	     66914 allocs/op	 147647784 bytes-from-system	 137887744 heap-bytes-from-system	   5007808 other-bytes-from-system	 128958464 peak-RSS-bytes	1397661696 peak-VM-bytes	    491520 stack-bytes-from-system	   6959479 user+sys-ns/op
+# memprof=/tmp/33.prof.txt
+# cpuprof=/tmp/32.prof.txt
+BenchmarkGarbage/benchmem-MB=64-1     2000	   6909986 ns/op	   4252592 GC-bytes-from-system	     27355 STW-ns/GC	      1463 STW-ns/op	   2745718 allocated-bytes/op	     66916 allocs/op	 147909928 bytes-from-system	 138117120 heap-bytes-from-system	   5245304 other-bytes-from-system	 134737920 peak-RSS-bytes	1397923840 peak-VM-bytes	    294912 stack-bytes-from-system	   6941697 user+sys-ns/op
+# memprof=/tmp/44.prof.txt
+# cpuprof=/tmp/43.prof.txt
+BenchmarkGarbage/benchmem-MB=64-1     2000	   6914830 ns/op	   4289480 GC-bytes-from-system	     27375 STW-ns/GC	      1464 STW-ns/op	   2745934 allocated-bytes/op	     66918 allocs/op	 148172072 bytes-from-system	 137789440 heap-bytes-from-system	   5503328 other-bytes-from-system	 134737920 peak-RSS-bytes	1398185984 peak-VM-bytes	    589824 stack-bytes-from-system	   6948258 user+sys-ns/op
+# memprof=/tmp/55.prof.txt
+# cpuprof=/tmp/54.prof.txt
+BenchmarkGarbage/benchmem-MB=64-1     2000	   6828867 ns/op	   4262856 GC-bytes-from-system	     26620 STW-ns/GC	      1424 STW-ns/op	   2746076 allocated-bytes/op	     66919 allocs/op	 148434216 bytes-from-system	 138084352 heap-bytes-from-system	   5759328 other-bytes-from-system	 134737920 peak-RSS-bytes	1398448128 peak-VM-bytes	    327680 stack-bytes-from-system	   6858189 user+sys-ns/op
+# memprof=/tmp/66.prof.txt
+# cpuprof=/tmp/65.prof.txt
+BenchmarkGarbage/benchmem-MB=64-1     2000	   6955984 ns/op	   4262856 GC-bytes-from-system	     27306 STW-ns/GC	      1474 STW-ns/op	   2746216 allocated-bytes/op	     66920 allocs/op	 148696360 bytes-from-system	 138084352 heap-bytes-from-system	   6021472 other-bytes-from-system	 135602176 peak-RSS-bytes	1398710272 peak-VM-bytes	    327680 stack-bytes-from-system	   6991193 user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: wasip1
+goarch: wasm
+
+consumption=1690KB npkg=15
+BenchmarkGarbage/benchmem-MB=64-1      500	  25277329 ns/op	   2999632 GC-bytes-from-system	     83037 STW-ns/GC	      4484 STW-ns/op	   2752743 allocated-bytes/op	     66917 allocs/op	 124614904 bytes-from-system	 115179520 heap-bytes-from-system	   4174760 other-bytes-from-system	   2260992 stack-bytes-from-system
+BenchmarkGarbage/benchmem-MB=64-1      500	  24752217 ns/op	   3045104 GC-bytes-from-system	     82646 STW-ns/GC	      4462 STW-ns/op	   2753801 allocated-bytes/op	     66925 allocs/op	 133265656 bytes-from-system	 123535360 heap-bytes-from-system	   4424200 other-bytes-from-system	   2260992 stack-bytes-from-system
+BenchmarkGarbage/benchmem-MB=64-1      500	  24949023 ns/op	   3079920 GC-bytes-from-system	     81043 STW-ns/GC	      4376 STW-ns/op	   2754685 allocated-bytes/op	     66930 allocs/op	 133331192 bytes-from-system	 123568128 heap-bytes-from-system	   4422152 other-bytes-from-system	   2260992 stack-bytes-from-system
+BenchmarkGarbage/benchmem-MB=64-1      500	  25218263 ns/op	   3079920 GC-bytes-from-system	     80215 STW-ns/GC	      4331 STW-ns/op	   2755393 allocated-bytes/op	     66934 allocs/op	 133593336 bytes-from-system	 123568128 heap-bytes-from-system	   4684296 other-bytes-from-system	   2260992 stack-bytes-from-system
+BenchmarkGarbage/benchmem-MB=64-1      500	  25372170 ns/op	   3094328 GC-bytes-from-system	     82839 STW-ns/GC	      4473 STW-ns/op	   2755844 allocated-bytes/op	     66937 allocs/op	 133855480 bytes-from-system	 123568128 heap-bytes-from-system	   4932032 other-bytes-from-system	   2260992 stack-bytes-from-system
+BenchmarkGarbage/benchmem-MB=64-1      500	  25172872 ns/op	   3094328 GC-bytes-from-system	     82617 STW-ns/GC	      4461 STW-ns/op	   2756197 allocated-bytes/op	     66940 allocs/op	 133855480 bytes-from-system	 123568128 heap-bytes-from-system	   4932032 other-bytes-from-system	   2260992 stack-bytes-from-system
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+# memprof=/tmp/14.prof.txt
+# cpuprof=/tmp/13.prof.txt
+BenchmarkHTTP-1   500000	     14425 ns/op	   2670064 GC-bytes-from-system	     51067 P50-ns/op	     77784 P95-ns/op	    139825 P99-ns/op	     18367 STW-ns/GC	        11 STW-ns/op	      5514 allocated-bytes/op	        64 allocs/op	  38360328 bytes-from-system	  33062912 heap-bytes-from-system	   2168600 other-bytes-from-system	  33005568 peak-RSS-bytes	1631330304 peak-VM-bytes	    458752 stack-bytes-from-system	     14627 user+sys-ns/op
+# cpuprof=/tmp/27.prof.txt
+# memprof=/tmp/28.prof.txt
+BenchmarkHTTP-1   500000	     14445 ns/op	   2680520 GC-bytes-from-system	     51317 P50-ns/op	     77067 P95-ns/op	    131363 P99-ns/op	     17171 STW-ns/GC	        10 STW-ns/op	      5515 allocated-bytes/op	        64 allocs/op	  46748936 bytes-from-system	  41484288 heap-bytes-from-system	   2125376 other-bytes-from-system	  40603648 peak-RSS-bytes	1631330304 peak-VM-bytes	    458752 stack-bytes-from-system	     14602 user+sys-ns/op
+# cpuprof=/tmp/41.prof.txt
+# memprof=/tmp/42.prof.txt
+BenchmarkHTTP-1   500000	     14329 ns/op	   2719456 GC-bytes-from-system	     51291 P50-ns/op	     75758 P95-ns/op	    111366 P99-ns/op	     16435 STW-ns/GC	        10 STW-ns/op	      5515 allocated-bytes/op	        64 allocs/op	  46748936 bytes-from-system	  41451520 heap-bytes-from-system	   2119208 other-bytes-from-system	  42483712 peak-RSS-bytes	1631330304 peak-VM-bytes	    458752 stack-bytes-from-system	     14501 user+sys-ns/op
+# memprof=/tmp/56.prof.txt
+# cpuprof=/tmp/55.prof.txt
+BenchmarkHTTP-1   500000	     14410 ns/op	   2735840 GC-bytes-from-system	     51249 P50-ns/op	     76101 P95-ns/op	    144383 P99-ns/op	     17191 STW-ns/GC	        10 STW-ns/op	      5515 allocated-bytes/op	        64 allocs/op	  46748936 bytes-from-system	  41451520 heap-bytes-from-system	   2102824 other-bytes-from-system	  42483712 peak-RSS-bytes	1631330304 peak-VM-bytes	    458752 stack-bytes-from-system	     14566 user+sys-ns/op
+# memprof=/tmp/70.prof.txt
+# cpuprof=/tmp/69.prof.txt
+BenchmarkHTTP-1   500000	     14570 ns/op	   2768608 GC-bytes-from-system	     51370 P50-ns/op	     79088 P95-ns/op	    123280 P99-ns/op	     16935 STW-ns/GC	        10 STW-ns/op	      5515 allocated-bytes/op	        64 allocs/op	  46748936 bytes-from-system	  41451520 heap-bytes-from-system	   2070056 other-bytes-from-system	  42905600 peak-RSS-bytes	1631330304 peak-VM-bytes	    458752 stack-bytes-from-system	     14729 user+sys-ns/op
+# memprof=/tmp/84.prof.txt
+# cpuprof=/tmp/83.prof.txt
+BenchmarkHTTP-1   500000	     14362 ns/op	   2774752 GC-bytes-from-system	     51175 P50-ns/op	     76435 P95-ns/op	    121456 P99-ns/op	     16572 STW-ns/GC	        10 STW-ns/op	      5515 allocated-bytes/op	        64 allocs/op	  47011080 bytes-from-system	  41451520 heap-bytes-from-system	   2326056 other-bytes-from-system	  42905600 peak-RSS-bytes	1631330304 peak-VM-bytes	    458752 stack-bytes-from-system	     14512 user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: wasip1
+goarch: wasm
+
+BenchmarkHTTP-1   100000	     79242 ns/op	   1613560 GC-bytes-from-system	    291668 P50-ns/op	    435461 P95-ns/op	    555728 P99-ns/op	     67505 STW-ns/GC	        47 STW-ns/op	      6318 allocated-bytes/op	        75 allocs/op	  37353720 bytes-from-system	  33193984 heap-bytes-from-system	   2218496 other-bytes-from-system	    327680 stack-bytes-from-system
+BenchmarkHTTP-1   100000	     78598 ns/op	   1646840 GC-bytes-from-system	    290124 P50-ns/op	    432199 P95-ns/op	    550779 P99-ns/op	     65054 STW-ns/GC	        46 STW-ns/op	      6318 allocated-bytes/op	        75 allocs/op	  45742328 bytes-from-system	  41582592 heap-bytes-from-system	   2185216 other-bytes-from-system	    327680 stack-bytes-from-system
+BenchmarkHTTP-1   100000	     78266 ns/op	   1646840 GC-bytes-from-system	    289803 P50-ns/op	    427929 P95-ns/op	    565206 P99-ns/op	     66601 STW-ns/GC	        47 STW-ns/op	      6319 allocated-bytes/op	        75 allocs/op	  45742328 bytes-from-system	  41582592 heap-bytes-from-system	   2185216 other-bytes-from-system	    327680 stack-bytes-from-system
+BenchmarkHTTP-1   100000	     78533 ns/op	   1659152 GC-bytes-from-system	    290000 P50-ns/op	    429914 P95-ns/op	    556862 P99-ns/op	     64730 STW-ns/GC	        45 STW-ns/op	      6319 allocated-bytes/op	        75 allocs/op	  45742328 bytes-from-system	  41582592 heap-bytes-from-system	   2172904 other-bytes-from-system	    327680 stack-bytes-from-system
+BenchmarkHTTP-1   100000	     79189 ns/op	   1663248 GC-bytes-from-system	    291130 P50-ns/op	    437125 P95-ns/op	    578465 P99-ns/op	     66574 STW-ns/GC	        47 STW-ns/op	      6318 allocated-bytes/op	        75 allocs/op	  45742328 bytes-from-system	  41582592 heap-bytes-from-system	   2168808 other-bytes-from-system	    327680 stack-bytes-from-system
+BenchmarkHTTP-1   100000	     79135 ns/op	   1667344 GC-bytes-from-system	    290743 P50-ns/op	    441681 P95-ns/op	    570699 P99-ns/op	     67455 STW-ns/GC	        47 STW-ns/op	      6319 allocated-bytes/op	        75 allocs/op	  45742328 bytes-from-system	  41582592 heap-bytes-from-system	   2164712 other-bytes-from-system	    327680 stack-bytes-from-system
+pkg: golang.org/x/benchmarks
+goos: linux
+goarch: amd64
+
+# memprof=/tmp/11.prof.txt
+# cpuprof=/tmp/10.prof.txt
+BenchmarkJSON-1      500	  21299344 ns/op	   2636672 GC-bytes-from-system	     15951 STW-ns/GC	      3668 STW-ns/op	   4233460 allocated-bytes/op	     40008 allocs/op	  67851528 bytes-from-system	  62685184 heap-bytes-from-system	   2300296 other-bytes-from-system	  59604992 peak-RSS-bytes	1259110400 peak-VM-bytes	    229376 stack-bytes-from-system	  21349192 user+sys-ns/op
+# memprof=/tmp/22.prof.txt
+# cpuprof=/tmp/21.prof.txt
+BenchmarkJSON-1      500	  21275236 ns/op	   2803064 GC-bytes-from-system	     16598 STW-ns/GC	      3884 STW-ns/op	   4183318 allocated-bytes/op	     40009 allocs/op	  68179208 bytes-from-system	  62652416 heap-bytes-from-system	   2461584 other-bytes-from-system	  62984192 peak-RSS-bytes	1259438080 peak-VM-bytes	    262144 stack-bytes-from-system	  21336426 user+sys-ns/op
+# memprof=/tmp/33.prof.txt
+# cpuprof=/tmp/32.prof.txt
+BenchmarkJSON-1      500	  21205305 ns/op	   2807160 GC-bytes-from-system	     15998 STW-ns/GC	      3583 STW-ns/op	   4107766 allocated-bytes/op	     40008 allocs/op	  68179208 bytes-from-system	  62619648 heap-bytes-from-system	   2457488 other-bytes-from-system	  63614976 peak-RSS-bytes	1259438080 peak-VM-bytes	    294912 stack-bytes-from-system	  21258664 user+sys-ns/op
+# cpuprof=/tmp/43.prof.txt
+# memprof=/tmp/44.prof.txt
+BenchmarkJSON-1      500	  21403681 ns/op	   2877832 GC-bytes-from-system	     16285 STW-ns/GC	      3778 STW-ns/op	   4174901 allocated-bytes/op	     40009 allocs/op	  76636440 bytes-from-system	  71041024 heap-bytes-from-system	   2455440 other-bytes-from-system	  65028096 peak-RSS-bytes	1326616576 peak-VM-bytes	    262144 stack-bytes-from-system	  21464382 user+sys-ns/op
+# cpuprof=/tmp/54.prof.txt
+# memprof=/tmp/55.prof.txt
+BenchmarkJSON-1      500	  21461368 ns/op	   2877832 GC-bytes-from-system	     15515 STW-ns/GC	      3506 STW-ns/op	   4191797 allocated-bytes/op	     40009 allocs/op	  76636440 bytes-from-system	  71041024 heap-bytes-from-system	   2455440 other-bytes-from-system	  65028096 peak-RSS-bytes	1326616576 peak-VM-bytes	    262144 stack-bytes-from-system	  21517112 user+sys-ns/op
+# memprof=/tmp/66.prof.txt
+# cpuprof=/tmp/65.prof.txt
+BenchmarkJSON-1      500	  21386882 ns/op	   2879880 GC-bytes-from-system	     15630 STW-ns/GC	      3501 STW-ns/op	   4166674 allocated-bytes/op	     40010 allocs/op	  76636440 bytes-from-system	  71041024 heap-bytes-from-system	   2453392 other-bytes-from-system	  65028096 peak-RSS-bytes	1326616576 peak-VM-bytes	    262144 stack-bytes-from-system	  21449340 user+sys-ns/op
+pkg: golang.org/x/benchmarks
+goos: wasip1
+goarch: wasm
+
+BenchmarkJSON-1      100	 102766424 ns/op	   1408336 GC-bytes-from-system	     70178 STW-ns/GC	     17544 STW-ns/op	   4002555 allocated-bytes/op	     40003 allocs/op	  45480184 bytes-from-system	  41746432 heap-bytes-from-system	   2161576 other-bytes-from-system	    163840 stack-bytes-from-system
+BenchmarkJSON-1      100	 106200657 ns/op	   1621864 GC-bytes-from-system	     69340 STW-ns/GC	     13868 STW-ns/op	   4002984 allocated-bytes/op	     40008 allocs/op	  54327544 bytes-from-system	  50167808 heap-bytes-from-system	   2374032 other-bytes-from-system	    163840 stack-bytes-from-system
+BenchmarkJSON-1      100	 101428511 ns/op	   1704240 GC-bytes-from-system	     68130 STW-ns/GC	     17032 STW-ns/op	   4045063 allocated-bytes/op	     40010 allocs/op	  54327544 bytes-from-system	  50167808 heap-bytes-from-system	   2291656 other-bytes-from-system	    163840 stack-bytes-from-system
+BenchmarkJSON-1      100	 101389366 ns/op	   1708336 GC-bytes-from-system	     67517 STW-ns/GC	     16879 STW-ns/op	   4045295 allocated-bytes/op	     40011 allocs/op	  54327544 bytes-from-system	  50167808 heap-bytes-from-system	   2287560 other-bytes-from-system	    163840 stack-bytes-from-system
+BenchmarkJSON-1      100	 102018454 ns/op	   1710384 GC-bytes-from-system	     69853 STW-ns/GC	     17463 STW-ns/op	   4045614 allocated-bytes/op	     40012 allocs/op	  54327544 bytes-from-system	  50167808 heap-bytes-from-system	   2285512 other-bytes-from-system	    163840 stack-bytes-from-system
+BenchmarkJSON-1      100	 102937288 ns/op	   1747248 GC-bytes-from-system	     69457 STW-ns/GC	     17364 STW-ns/op	   4045645 allocated-bytes/op	     40013 allocs/op	  54327544 bytes-from-system	  50135040 heap-bytes-from-system	   2281416 other-bytes-from-system	    163840 stack-bytes-from-system

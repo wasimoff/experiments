@@ -1,0 +1,103 @@
+pkg: golang.org/x/benchmarks
+        │    amd64    │                 wasm                 │
+        │   sec/op    │    sec/op     vs base                │
+Garbage   6.912m ± 4%   25.196m ± 2%  +264.50% (p=0.002 n=6)
+HTTP      14.42µ ± 1%    78.87µ ± 1%  +447.02% (p=0.002 n=6)
+JSON      21.34m ± 1%   102.39m ± 4%  +379.74% (p=0.002 n=6)
+geomean   1.286m         5.882m       +357.34%
+
+        │        amd64         │                    wasm                     │
+        │ GC-bytes-from-system │ GC-bytes-from-system  vs base               │
+Garbage           4.064Mi ± 3%          2.937Mi ±  3%  -27.73% (p=0.002 n=6)
+HTTP              2.601Mi ± 2%          1.576Mi ±  2%  -39.40% (p=0.002 n=6)
+JSON              2.711Mi ± 7%          1.627Mi ± 17%  -39.97% (p=0.002 n=6)
+geomean           3.060Mi               1.960Mi        -35.94%
+
+        │    amd64    │                wasm                 │
+        │ STW-sec/GC  │ STW-sec/GC   vs base                │
+Garbage   27.37µ ± 5%   82.63µ ± 3%  +201.96% (p=0.002 n=6)
+HTTP      17.05µ ± 8%   66.59µ ± 3%  +290.47% (p=0.002 n=6)
+JSON      15.97µ ± 4%   69.40µ ± 3%  +334.43% (p=0.002 n=6)
+geomean   19.53µ        72.55µ       +271.38%
+
+        │    amd64     │                 wasm                  │
+        │  STW-sec/op  │  STW-sec/op    vs base                │
+Garbage   1.469µ ±  5%    4.462µ ±  3%  +203.71% (p=0.002 n=6)
+HTTP      10.00n ± 10%    47.00n ±  4%  +370.00% (p=0.002 n=6)
+JSON      3.626µ ±  7%   17.198µ ± 19%  +374.36% (p=0.002 n=6)
+geomean   376.2n          1.534µ        +307.59%
+
+        │       amd64        │                   wasm                    │
+        │ allocated-bytes/op │ allocated-bytes/op  vs base               │
+Garbage         2.619Mi ± 0%         2.627Mi ± 0%   +0.34% (p=0.002 n=6)
+HTTP            5.386Ki ± 0%         6.170Ki ± 0%  +14.57% (p=0.002 n=6)
+JSON            3.986Mi ± 2%         3.858Mi ± 1%   -3.20% (p=0.002 n=6)
+geomean         389.2Ki              403.3Ki        +3.62%
+
+        │    amd64    │                wasm                │
+        │  allocs/op  │  allocs/op   vs base               │
+Garbage   66.92k ± 0%   66.93k ± 0%   +0.02% (p=0.015 n=6)
+HTTP       64.00 ± 0%    75.00 ± 0%  +17.19% (p=0.002 n=6)
+JSON      40.01k ± 0%   40.01k ± 0%        ~ (p=0.327 n=6)
+geomean   5.554k        5.856k        +5.44%
+
+        │       amd64       │                   wasm                   │
+        │ bytes-from-system │ bytes-from-system  vs base               │
+Garbage       141.2Mi ± 12%       127.3Mi ±  7%   -9.85% (p=0.035 n=6)
+HTTP          44.58Mi ± 18%       43.62Mi ± 18%   -2.15% (p=0.013 n=6)
+JSON          69.05Mi ±  6%       51.81Mi ± 16%  -24.97% (p=0.002 n=6)
+geomean       75.75Mi             66.01Mi        -12.85%
+
+        │         amd64          │                     wasm                      │
+        │ heap-bytes-from-system │ heap-bytes-from-system  vs base               │
+Garbage            131.6Mi ± 12%            117.8Mi ±  7%  -10.45% (p=0.039 n=6)
+HTTP               39.53Mi ± 20%            39.66Mi ± 20%   +0.32% (p=0.013 n=6)
+JSON               63.77Mi ±  6%            47.84Mi ± 17%  -24.97% (p=0.002 n=6)
+geomean            69.22Mi                  60.69Mi        -12.32%
+
+        │          amd64          │                      wasm                      │
+        │ other-bytes-from-system │ other-bytes-from-system  vs base               │
+Garbage             5.125Mi ± 12%              4.343Mi ± 8%  -15.26% (p=0.009 n=6)
+HTTP                2.024Mi ± 10%              2.078Mi ± 2%        ~ (p=0.084 n=6)
+JSON                2.342Mi ±  6%              2.181Mi ± 5%   -6.88% (p=0.004 n=6)
+geomean             2.896Mi                    2.700Mi        -6.77%
+
+        │     amd64      │
+        │ peak-RSS-bytes │
+Garbage    128.5Mi ±  4%
+HTTP       40.52Mi ± 22%
+JSON       61.34Mi ±  7%
+geomean    68.35Mi
+
+        │     amd64     │
+        │ peak-VM-bytes │
+Garbage    1.302Gi ± 5%
+HTTP       1.519Gi ± 0%
+JSON       1.204Gi ± 3%
+geomean    1.336Gi
+
+        │          amd64          │                      wasm                       │
+        │ stack-bytes-from-system │ stack-bytes-from-system  vs base                │
+Garbage             320.0Ki ± 80%             2208.0Ki ± 0%  +590.00% (p=0.002 n=6)
+HTTP                448.0Ki ±  0%              320.0Ki ± 0%   -28.57% (p=0.002 n=6)
+JSON                256.0Ki ± 12%              160.0Ki ± 0%   -37.50% (p=0.002 n=6)
+geomean             332.3Ki                    483.5Ki        +45.50%
+
+        │      amd64      │
+        │ user+sys-sec/op │
+Garbage       6.945m ± 4%
+HTTP          14.58µ ± 1%
+JSON          21.40m ± 1%
+geomean       1.294m
+
+     │    amd64    │                 wasm                 │
+     │ P50-sec/op  │  P50-sec/op   vs base                │
+HTTP   51.27µ ± 0%   290.43µ ± 0%  +466.48% (p=0.002 n=6)
+
+     │    amd64    │                 wasm                 │
+     │ P95-sec/op  │  P95-sec/op   vs base                │
+HTTP   76.75µ ± 3%   433.83µ ± 2%  +465.24% (p=0.002 n=6)
+
+     │    amd64     │                wasm                 │
+     │  P99-sec/op  │ P99-sec/op   vs base                │
+HTTP   127.3µ ± 13%   561.0µ ± 3%  +340.64% (p=0.002 n=6)
